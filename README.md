@@ -1,4 +1,4 @@
-Editing template for README file.
+Editing template for README file..
 
 # ProandS_Project
 This repository contains the files for the project in the Programming and Scripting module 2020
