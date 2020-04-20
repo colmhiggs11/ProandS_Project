@@ -1,15 +1,13 @@
-Editing template for README file..
+
+presentation on the data set in a few weeks’ time, where you explain what investigating a
+ data set entails and how Python can be used to do it.
 
 # ProandS_Project
-This repository contains the files for the project in the Programming and Scripting module 2020. This 
-project focuses on the Iris dataset. It requires research and investigation into the dataset and present 
-the findings 
+This repository contains the files for the project in the Programming and Scripting module 2020. 
 
-presentation on the data set in a few weeks’ time, where you explain what investigating a d
-ata set entails and how Python can be used to do it.
 
 ## Table of Contents
-* [1. Description](#1-description)
+* [1. Introduction / Description](#1-description)
 
 * [2. Usage](#2-Usage)
 
@@ -19,9 +17,9 @@ ata set entails and how Python can be used to do it.
 
 * [3. Guides and resources](#2-installation)
 
-* [3. API](#2-API)
+* [3. API](#3-API)
 
-* [3. License](#2-License)
+* [3. License](#4-License)
 
 * [3. References](#2-installation)
 
@@ -32,8 +30,9 @@ ata set entails and how Python can be used to do it.
 * [3. Contribute](#2-installation)
 
 
-## 1. Description
-### 1.1 General Info
+## 1.  Introduction / Description
+This project focuses on the Iris [dataset](#dataset). It requires research and analysis of the dataset and presentation
+of the findings 
 
 ## 2. Usage
 ### 2.1 General Info
