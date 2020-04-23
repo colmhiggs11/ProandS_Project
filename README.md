@@ -7,7 +7,7 @@ This repository contains the files for the project in the Programming and Script
 
 
 ## Table of Contents
-* [1. Introduction / Description](#1-description)
+* [1. Introduction / Description](#1-introduction--description)
 
 * [2. Usage](#2-Usage)
 
@@ -31,11 +31,11 @@ This repository contains the files for the project in the Programming and Script
 
 
 ## 1.  Introduction / Description
-This project focuses on the Iris [dataset](#dataset). It requires research and analysis of the dataset and presentation
-of the findings 
+What - This project focuses on the widely known Fischer Iris [dataset](#dataset). It requires research and analysis of the dataset and presentation
+of the findings The dataset used in this analysis was obtained from (""""""") RF Paper "The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis"
+The dataset consists of 50 samples from each of three species of IRIS. Four features from each of the species were measured including: Sepal length & width and Petal length & width
 
+How - 
 ## 2. Usage
-### 2.1 General Info
 
 ## 3. Installation
-### 3.1 General Info
