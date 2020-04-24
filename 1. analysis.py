@@ -1,5 +1,8 @@
 ## Colm Higgins
 ## program to analyse data for project
 
-import iris_funcs
+from iris_funcs import IrSums
     
+IrSums("Iris-setosa")
+IrSums("Iris-versicolor")
+IrSums("Iris-virginica")
