@@ -7,29 +7,26 @@ import seaborn as sns
 heading=["sepal-length","sepal-width","petal-length","petal-width","Species"]
 Data = pd.read_csv('iris.data',names = heading)
  
-
-sns.distplot( Data["sepal-length"] , color="blue", label="Sepal Length")
-sns.distplot( Data["sepal-width"] , color="red", label="Sepal Width")
-#sns.distplot( Data["petal-length"] , color="green", label="Petal Length")
-#sns.distplot( Data["petal-width"] , color="orange", label="Petal Width")
-plt.show()
-
 sns.pairplot(Data,hue="Species")
 #plt.title("Plot of species vairables")
-plt.show()
+#plt.show()
 
+def IrSums():
+    #Irflowr = Data[Data.Species == Spec_name]
+    #Irflowr.describe()
+    #print(Data[Data.Species == "Iris-setosa"].describe(),file = f)
+    #Vers_Sum = print(Data[Data.Species == "Iris-versicolor"].describe())
+    #Virg_Sum = print(Data[Data.Species == "Iris-virginica"].describe())
+    with open('summary.csv', 'w') as f:
+        print(Data[Data.Species == "Iris-setosa"].describe(),file = f)
+        print(Data[Data.Species == "Iris-versicolor"].describe(),file = f)
+        print(Data[Data.Species == "Iris-virginica"].describe(),file = f)
+        #print("Summary of {} flower\n".format(Spec_name),Irflowr.describe(),file = f)
+       # f.write(Seto_Sum,file = f)
+    #print(Irflowr.describe())
 
-
-def IrSums(Spec_name):
-    Irflowr = Data[Data.Species == Spec_name]
-   # print("Summary of {} flower\n".format(Spec_name),Irflowr.describe(),"\n")
-    with open ('summary.csv', 'w') as f:
-        print(Irflowr.describe(),file=f)
-    
-def IrHist(Spec_name1): 
-    import matplotlib.pyplot as plt
-    Irflowr = Data[Data.Species == Spec_name1]
-    Irflowr.hist()
-    plt.title("Histogram of Sepal width&length & Petal width&length for {} Flower".format(Spec_name1))
-    plt.show()
-
+#def IrHist(Spec_name1): 
+    #import matplotlib.pyplot as plt
+    #Irflowr = Data[Data.Species == Spec_name1]
+    #Irflowr.hist()
+    #plt.title("Histogram of Sepal width&length & Petal width&length for {} Flower".format(Spec_name1))
