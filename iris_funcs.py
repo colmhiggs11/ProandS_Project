@@ -18,9 +18,9 @@ def IrSums():
     #Vers_Sum = print(Data[Data.Species == "Iris-versicolor"].describe())
     #Virg_Sum = print(Data[Data.Species == "Iris-virginica"].describe())
     with open('summary.csv', 'w') as f:
-        print("#Summary of Iris Setosa flower data\n",Data[Data.Species == "Iris-setosa"].describe(),"\n",file = f)
-        print("#Summary of Iris versicolor flower data\n",Data[Data.Species == "Iris-versicolor"].describe(),"\n",file = f)
-        print("#Summary of Iris virginica flower data\n",Data[Data.Species == "Iris-virginica"].describe(),"\n",file = f)
+        print("Summary of Iris Setosa flower data\n",Data[Data.Species == "Iris-setosa"].describe(),"\n",file = f)
+       # print("#Summary of Iris versicolor flower data\n",Data[Data.Species == "Iris-versicolor"].describe(),"\n",file = f)
+       # print("#Summary of Iris virginica flower data\n",Data[Data.Species == "Iris-virginica"].describe(),"\n",file = f)
         #print(Data[Data.Species == "Iris-versicolor"].describe(),file = f)
         #print(Data[Data.Species == "Iris-virginica"].describe(),file = f)
         #print("Summary of {} flower\n".format(Spec_name),Irflowr.describe(),file = f)
