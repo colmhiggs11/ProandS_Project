@@ -12,10 +12,11 @@ sns.pairplot(Data,hue="Species")
 plt.show()
 
 def IrSums():
-    with open('summary.csv', 'w') as f:
-        print("Summary of Iris Setosa flower data\n",Data[Data.Species == "Iris-setosa"].describe(),"\n",file = f)
-        print("#Summary of Iris versicolor flower data\n",Data[Data.Species == "Iris-versicolor"].describe(),"\n",file = f)
-        print("#Summary of Iris virginica flower data\n",Data[Data.Species == "Iris-virginica"].describe(),"\n",file = f)
+    with open('summarySetosa.csv', 'w') as f:
+        print(Data[Data.Species == "Iris-setosa"].describe(),"\n",file = f)
+    with open('summaryVersicolor.csv', 'w') as e:
+        print(Data[Data.Species == "Iris-versicolor"].describe(),"\n",file = e)
+        print("# Summary of Iris virginica flower data\n",Data[Data.Species == "Iris-virginica"].describe(),"\n",file = f)
     print(Data.describe())
 
 #def IrHist(Spec_name1): 
