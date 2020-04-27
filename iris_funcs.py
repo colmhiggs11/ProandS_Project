@@ -6,43 +6,52 @@ import seaborn as sns
 
 heading=["sepal-length","sepal-width","petal-length","petal-width","Species"]
 Data = pd.read_csv('IRIS.csv',names = heading)
- 
+print(Data.isnull().sum())
+
 def IrSums():
     with open('summary.txt', 'w') as f:
         print("Summary of Iris Setosa flower data\n",Data[Data.Species == "Iris-setosa"].describe(),"\n",file = f)
         print("Summary of Iris versicolor flower data\n",Data[Data.Species == "Iris-versicolor"].describe(),"\n",file = f)
         print("Summary of Iris virginica flower data\n",Data[Data.Species == "Iris-virginica"].describe(),"\n",file = f)    
 
-def IrHist(Measurement): 
+def IrHist(Flwrtyp1): 
     sns.set()
-    x = sns.FacetGrid(Data,hue = "Species",height=10 , aspect=2)
-    x.map(sns.distplot, Measurement, bins=25, kde=False)
+    x = sns.FacetGrid(Data,hue = heading[4],height=10 , aspect=2)
+    x.map(sns.distplot, Flwrtyp1, bins=25, kde=False)
     plt.ylabel("Frequency")
     plt.legend()
-    plt.title("{} Histogram plot".format(Measurement))
+    plt.title("{} Histogram plot".format(Flwrtyp1))
     plt.tight_layout()
-    plt.savefig("{}.png".format(Measurement))
+    plt.savefig("{}.png".format(Flwrtyp1))
     plt.clf
     plt.show()
-
 
 def Sctrplt():
-    sns.pairplot(Data,hue="Species",aspect=2)
+    sns.pairplot(Data,hue=heading[4],aspect=2)
     plt.savefig("Scatterplot of variables.png")
     plt.clf
-    #plt.title("Plot of species vairables")
     plt.show()
 
-#print(Data.groupby('Species').count())
+#def Vioplots(Flwrtyp2):
+sns.set()
+plt.subplot(2,2,1)
+sns.violinplot(heading[4], y = 'sepal-length', data=Data)
+plt.subplot(2,2,2)
+sns.violinplot(heading[4], y = 'sepal-width', data=Data)
+plt.subplot(2,2,3)
+sns.violinplot(heading[4], y = 'petal-length', data=Data)
+plt.subplot(2,2,4)
+sns.violinplot(heading[4], y = 'petal-width', data=Data)
+#plt.title("{} Violin Plot".format(Flwrtyp2))
+#plt.savefig("Violin plot of variables.png")
+plt.show()
 
-#x = np.linspace(1.0,5,149)
-#Data.groupby('sepal-length')
-#fig, ax =plt.subplots()
-##ax.plot(x,Data)
-#fig.show()
-#input()
+#print("Correlation of Iris Setosa flower data\n",Data[Data.Species == "Iris-setosa"].corr())
+#print("Correlation of Iris versicolor flower data\n",Data[Data.Species == "Iris-versicolor"].corr())
+#print("Correlation of Iris virginica flower data\n",Data[Data.Species == "Iris-virginica"].corr())
+#print(Data.corr())
 
-#Data[Data.Species == "Iris-versicolor"].hist()
-#plt.title("Histogram of Sepal width&length & Petal width&length for {} Flower".format(Spec_name1))
-#plt.savefig("CH")
-#plt.show()
+corr = Data.corr()
+sns.heatmap(corr, annot = True,linewidths=2.5,vmin=-1,cmap="coolwarm_r" )
+plt.tight_layout()
+plt.show()
