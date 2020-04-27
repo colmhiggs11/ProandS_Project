@@ -2,7 +2,7 @@
 ## program to analyse data for project
 import iris_funcs as ifs
 
-ifs.IrSums()
+#ifs.IrSums()
 
 def Createhist():
   ifs.IrHist("sepal-length")
@@ -11,4 +11,5 @@ def Createhist():
   ifs.IrHist("petal-width")
 Createhist()
 
+#ifs.Sctrplt()
 
