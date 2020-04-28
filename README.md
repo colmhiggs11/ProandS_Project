@@ -63,17 +63,51 @@ Check if there is any other files that need to be mentioned.##########
 ## 1.  Introduction
 What - This project is an analysis of the well known Iris dataset for the Intoduction to Programming and Scripting module as part fulfilment of the Higher Diploma in Science in Computing (Data Analytics). The project focuses on the widely known Fischer Iris. It requires research and analysis of the dataset and presentation of the findings. 
 
-Layout of what will be fouund in this README
+### README Layout
+* How to analyse/investigate a dataset.
+    *Multivaraite analysis vs bivariate etc
+* Brief introduction of R Fisher
+    * Background
+    * Iris Data
+    * Mention other works
+* Code
+    * What libraries were used
+        * Descriptions
+    * How to run/Download
+    * What the code actually does
+    * Analysis.py
+        * What is does
+        * iris_funcs
+* Analysis of Data
+    * PLots of each format
+        * His
+        * Analysis
+        * Scat
+        * Analysis
+        * Viol
+        * Analysis
+        * Corr
+        * Analysis
+        * Summ
+        * Analysis
+* Summary / Outcomes / Conclusions
+    * Seperation of flowers
+    * thoughts on attributes
+* License
+    * MIT - What it is and why its important
+* References
+    * List
 
+
+## 2. Background Iris Data
+![Iris Flower types](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Flower%202.png?raw=true)
 How to analyse/investigate a dataset.
 
-
-
-## 2. Iris Data
-### R Fischer
+### R Fisher 
 ### Data
+    Data that was wrong and why/how I changed it.
+![Fisher Data Table](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Fischer%20Data%20Table.PNG?raw=true)
 
-![Fischer Data Table]()
 The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis"
 The dataset consists of 50 samples from each of three species of IRIS. Four features from each of the species were measured including: Sepal length & width and Petal length & width
 ### Assumptions / Analysis
@@ -182,3 +216,13 @@ Name | sepal-length| sepal-width| petal-length| petal-width
 
 
 Fischer Paper - https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x  -THE USE OF MULTIPLE MEASUREMENTS IN TAXONOMIC  PROBLEMS
+
+# Multivariate Analysis
+P.K. Bhattacharya, Prabir Burman, in Theory and Methods of Statistics, 2016
+
+12.1 Introduction
+Multivariate analysis is an area of statistics which deals with observations that are vector valued. Almost all univariate statistical methods have their multivariate counterparts. For instance, when comparing two species of the same animal, various measures such as height, length, tail length, etc., may be measured. One can then compare these two species using a multivariate version of two-sample t-test. Fisher’s famous Iris data set contains four measurements for each of the three species: petal length, petal width, sepal length, and sepal width. In order to compare the three species, a multivariate analog of analysis of variance has been developed. If there is a new observation vector (of unknown species) with four measurements, then allocation of this observation vector to one of the species is known as the problem of classification.
+
+Another class of procedures has been developed for multivariate data which deal with dimensionality reduction. If many measurements are taken on children where each measurement is a measure of intelligence, then it is often the case that these various measures are correlated with each other. If there are 20 measurements for each child, it may be reasonable to look for a few summaries which contain most of the information. These summaries are often expressed as appropriate linear combinations of the measurements. This class of methods is known as principal components and factor analyses.
+
+We describe these methods in a systematic manner starting with a few technical results on the Wishart distribution, which is a multivariate generalization of the chi-squared distribution.
