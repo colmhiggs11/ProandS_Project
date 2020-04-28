@@ -14,6 +14,7 @@ def IrSums():
         print("Summary of Iris virginica flower data\n",Data[Data.Species == "Iris-virginica"].describe(),"\n",file = f)
         print(Data.isnull().sum())   
 
+
 def IrHist(Flwrtyp1): 
     sns.set(font_scale=1.25)
     x = sns.FacetGrid(Data,hue = heading[4],height=10 , aspect=2)
