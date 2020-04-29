@@ -109,32 +109,58 @@ The version of python installed on my PC at time of completion of this project i
 http://anh.cs.luc.edu/handsonPythonTutorial/ch1.html
 https://wiki.python.org/moin/BeginnersGuide/Programmers 
 ### How to run
-To complete the analysis you will first need to download the  
+To complete the analysis you will first need to download the repository from Github, download and install pyton with anaconda, read the below on what each function/program does and then run. 
 ### Python Packages & libraries
 To run the code the following Packages & libraries need to be imported as there are a number of functions, dataframes, plotting & graph features specific to each library that are required in the analysis. The comments in [iris_funcs.py]() will show them in use but for more information on the packages or libraries see links below.
 [Pandas](https://pandas.pydata.org/) 
 [Seaborn](https://seaborn.pydata.org/index.html) 
 [Matplotlib](https://matplotlib.org/)
-### What it does
+
+### What code does
 The two main file that will provide the outputs for the analysis are *[iris_funcs.py]()* and *[2. analysis.py](https://github.com/colmhiggs11/ProandS_Project/blob/master/1.%20analysis.py)*. 
 iris_funcs.py is made up of functions and script that imports the codes and creates the environment for the analysis to take place. Pandas is used to create the dataframe and import the dataset as Iris.csv. Once the headings are assigned to the rows and variable Data assigned the dataset contents, the five functions are created. Explanantions below.
 
-IrSums(): - This function opens and writes to a text file called summary.txt with a summary of the following for each of the three species types. Mean, Standard deviation, minimum value, 25% percentile,
-50% percentile, 75% percentile & maximum values.
+#### iris_func.py
+**IrSums():** - This function opens and writes to a text file called summary.txt with a summary of the following for each of the three species types. Mean, Standard deviation, minimum value, 25% percentile,50% percentile, 75% percentile & maximum values. There is also a statement that will output whether there is any data missing from the dataset.
 ######################### put in links   #########################
 
 ---
- IrHist(Flwrtyp1): - This function creates the histograms for each of the four independant variables with data on each histogram shown by species type (assigned as heading[4]). To do this [seaborns FacetGrid](https://seaborn.pydata.org/generated/seaborn.FacetGrid.html) object is initalised and the dataset is mapped onto the single plot. A distribution plot was used with the kde(kernel density estimate) turned off as this calculates the probable density and skews the y-axis values. The rest of the function is just formatting and saving the plots as .png files to the repository. The number of bins used was 25. As there are 50 measurements per species this allows the data to be easily visualised from the histograms.
+ **IrHist(Mestyp1):** - This function creates the histograms for each of the four independant variables with data on each histogram shown by species type (assigned as heading[4]). To do this [seaborns FacetGrid](https://seaborn.pydata.org/generated/seaborn.FacetGrid.html) object is initalised and the dataset is mapped onto the single plot. A distribution plot was used with the kde(kernel density estimate) turned off as this calculates the probable density and skews the y-axis values. The rest of the function is just formatting and saving the plots as .png files to the repository. The number of bins used was 25. As there are 50 measurements per species this allows the data to be easily visualised from the histograms. The arguement required will be the measurement type otherwise known as one of the four independent variables.
 
 ---
-Sctrplt(): - The scatterplot was created using [seaborns pairplot](https://seaborn.pydata.org/generated/seaborn.pairplot.html). This plots pairwise variables in the dataset again by species type in a grid of plots. This was then saved to the repository as a .png file.
+**Sctrplt():** - The scatterplot was created using [seaborns pairplot](https://seaborn.pydata.org/generated/seaborn.pairplot.html). This plots pairwise variables in the dataset again by species type in a grid of plots. This was then saved to the repository as a .png file.
 
 ---
-Vioplots(Flwrtyp2): - This function creates four violinplots as subplots using [seaborns violinplot](https://seaborn.pydata.org/generated/seaborn.violinplot.html). Using plt.subplot from [Matplotlib](https://matplotlib.org/3.2.1/api/_as_gen/matplotlib.pyplot.subplot.html) each plot can be assigned a position in the four figure plot.
+**Vioplots(Mestyp2):** - This function creates four violinplots as subplots using [seaborns violinplot](https://seaborn.pydata.org/generated/seaborn.violinplot.html). Using plt.subplot from [Matplotlib](https://matplotlib.org/3.2.1/api/_as_gen/matplotlib.pyplot.subplot.html) each plot can be assigned a position in the four figure plot. The arguement required will be the measurement type otherwise known as one of the four independent variables. 
 
 ---
-Ir_Corrls(): - This function creates a heatmap correlation table. [Seaborns heatmap](https://seaborn.pydata.org/generated/seaborn.heatmap.html) function creates the color encoded matrix once the correct data file is added. This particular heatmap shows correlation for overall file not by species type. The rest of the script is formatting. There was an issue with the heatmap function in Python 3.7.4 that cut out half of the top and bottom sections of the heatmap. To get around this <ax.set_ylim(len(Iriscorrel)+0.5, -0.5)> is used to extend the y-axis. 
-https://github.com/matplotlib/matplotlib/issues/14751 
+**Ir_Corrls():** - This function creates a heatmap correlation table. [Seaborns heatmap](https://seaborn.pydata.org/generated/seaborn.heatmap.html) function creates the color encoded matrix once the correct data file is added. This particular heatmap shows correlation for overall file not by species type. The rest of the script is formatting. There was an issue with the heatmap function in Python 3.7.4 that cut out half of the top and bottom sections of the heatmap. To get around this below was used to [extend the y-axis](https://github.com/matplotlib/matplotlib/issues/14751) 
+
+    ax.set_ylim(len(Iriscorrel)+0.5, -0.5)>
+
+
+#### analysis.py
+**Importing Functions and list** - The functions created above were imported and the list assigned to variable heading also imported so that both could be called for execution. (*Shown below*)
+
+    import iris_funcs as ifs
+    from iris_funcs import heading
+
+**Calling functions** - Each of the functions were then called. Some required using the list **"heading"** to be passed through as the arguement. (*Shown below*)
+
+    ifs.IrSums()
+    ifs.Sctrplt()
+    ifs.Ir_Corrls()
+
+    def Createhist():
+        ifs.IrHist(heading[0])
+        ifs.IrHist(heading[1])
+        ifs.IrHist(heading[2])
+        ifs.IrHist(heading[3])
+    Createhist()        
+
+    def CreateVioplot():
+        ifs.Vioplots(heading[0:4])
+    CreateVioplot()
 
 ## 4. Analysis of Data
 Histograms

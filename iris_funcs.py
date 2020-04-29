@@ -15,15 +15,15 @@ def IrSums():
         print("Check for missing data", Data.isnull().sum(), sep="\n")   
 
 
-def IrHist(Flwrtyp1): 
+def IrHist(Mestyp1): 
     sns.set(font_scale=1.25)
-    x = sns.FacetGrid(Data,hue = heading[4],height=10 , aspect=2)
-    x.map(sns.distplot, Flwrtyp1, bins=25, kde=False)
+    ax = sns.FacetGrid(Data,hue = heading[4],height=10 , aspect=2)
+    ax.map(sns.distplot, Mestyp1, bins=25, kde=False)
     plt.ylabel("Frequency")
     plt.legend()
-    plt.title("{} Histogram plot".format(Flwrtyp1))
+    plt.title("{} Histogram plot".format(Mestyp1))
     plt.tight_layout()
-    plt.savefig("{}.png".format(Flwrtyp1))
+    plt.savefig("{}.png".format(Mestyp1))
     plt.clf
     plt.show()
 
@@ -35,7 +35,7 @@ def Sctrplt():
     plt.clf
     plt.show()
 
-def Vioplots(Flwrtyp2):
+def Vioplots(Mestyp2):
     sns.set(font_scale=1.25)
     plt.subplot(2,2,1)
     sns.violinplot(heading[4], y = 'sepal-length', data=Data)
@@ -45,7 +45,7 @@ def Vioplots(Flwrtyp2):
     sns.violinplot(heading[4], y = 'petal-length', data=Data)
     plt.subplot(2,2,4)
     sns.violinplot(heading[4], y = 'petal-width', data=Data)
-    plt.suptitle("Violin Plot of {} by Species type ".format(Flwrtyp2))
+    plt.suptitle("Violin Plot of {} by Species type ".format(Mestyp2))
     plt.show()
 
 def Ir_Corrls():
