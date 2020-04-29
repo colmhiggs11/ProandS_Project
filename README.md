@@ -1,6 +1,6 @@
-# Iris Data Set Project 
-
 <div align="center">
+
+# Iris Data Set Project 
 
 ![Image description](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/GMIT.png?raw=true) 
 
@@ -29,40 +29,33 @@ This repository contains the files for the project in the Programming and Script
     * Violin Plots
     * Correlation Heatmap
 
-* Other items
+* **Other items**
     * [Project Plan](https://github.com/colmhiggs11/ProandS_Project/blob/master/Programming%20Project%20Plan%20rev2.png?raw=true) *(Latest revision of the Project Plan - Broken down into sections with completion status)*
     * [Images used in the README.md](https://github.com/colmhiggs11/ProandS_Project/tree/master/Pictures%20for%20README)
     * [License](https://github.com/colmhiggs11/ProandS_Project/blob/master/LICENSE) *(MIT License)*
     * .gitignore
 
-
 ##########
 Add links for each of plots
 Check if there is any other files that need to be mentioned.##########
 
-
-
-
-
 ## Table of Contents
 * [1. Introduction](#1-introduction)
-
 * [2. Iris Data](#2-Usage)
-
 * [3. Code](#2-installation)
-
 * [3. Summary / Outcomes](#2-contributors)
-
 * [3. References](#2-installation)
-
 * [3. License](#4-License)
-
 * [3. References](#2-installation)
 
+### <span style="color: navy;">README Layout</span> 
 
+>
 ## 1.  Introduction
 What - This project is an analysis of the well known Iris dataset for the Intoduction to Programming and Scripting module as part fulfilment of the Higher Diploma in Science in Computing (Data Analytics). The project focuses on the widely known Fischer Iris. It requires research and analysis of the dataset and presentation of the findings. The main objective of this analysis is to try and classify the three species of Iris flower by using the four measurements of Sepal width, Sepal length, Petal width and Petal length. The analysis should show if this is possible and will be done in the steps laid out in the README. 
-
+### **<span style="color: navy;">README Layout</span>**
+### **<span style="color: red;">README Layout</span>**
+### **<span style="color: grey;">README Layout</span>**
 ### README Layout
 #### Background - Data Analysis / Fisher / IRIS data
 *This section will include a description of how an analysis/investigation of a dataset is completed and a brief introduction into Ronald Fisher and a look at some of his work.*
@@ -71,7 +64,7 @@ What - This project is an analysis of the well known Iris dataset for the Intodu
 #### Analysis of Data
 *This section will include discussion and analysis of the **outputs** (plots, histograms & summary files)*
 #### Summary / Outcomes / Conclusions
-*This section will summarise the analysis section and give conclusions based on the data presented.
+*This section will summarise the analysis section and give conclusions based on the data presented.*
 #### License
 *Brief description of License used while completing this project.*
 #### References
