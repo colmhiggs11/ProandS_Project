@@ -102,13 +102,17 @@ The Iris Dataset or “Fishers Iris Dataset” is one of the most recognisable d
 | *Iris flowers by species & measurements included in Fishers Dataset* |
 
 https://en.wikipedia.org/wiki/Iris_flower_data_set
-https://archive.ics.uci.edu/ml/datasets/iris 
+
+https://archive.ics.uci.edu/ml/datasets/iris  - Explain how had to change the data points
+This data differs from the data presented in Fishers article (identified by Steve Chadwick, spchadwick '@' espeedaz.net ). The 35th sample should be: 4.9,3.1,1.5,0.2,"Iris-setosa" where the error is in the fourth feature. The 38th sample: 4.9,3.6,1.4,0.1,"Iris-setosa" where the errors are in the second and third features.
+
 
 
 ## 3. Code for analysis
 
 ### How it was written
 The analysis of the Iris dataset will be completed using [Python](https://en.wikipedia.org/wiki/Python_(programming_language)).
+
 The version of python installed on my PC at time of completion of this project is :Python 3.7.4 (default, Aug  9 2019, 18:34:13) [MSC v.1915 64 bit (AMD64)] :: Anaconda, Inc. on win32
 http://anh.cs.luc.edu/handsonPythonTutorial/ch1.html
 https://wiki.python.org/moin/BeginnersGuide/Programmers 
@@ -285,7 +289,7 @@ max
 ---
 ## Correlation of Overall Iris flower data
 Name | sepal-length| sepal-width| petal-length| petal-width
------------- | ------------- | ------------ | ------------- | -------------
+:------------: | :-------------: | :------------: | :-------------: | :-------------:
 **sepal-length**| 1.000000 |  -0.117570  |    0.871754 |   0.817941
 **sepal-width** |-0.117570 |   1.000000  |  -0.428440  |  -0.366126
 **petal-length**| 0.871754 |  -0.428440  |   1.000000  |  0.962865
@@ -356,7 +360,10 @@ https://pandas.pydata.org/
 https://www.dataquest.io/blog/pandas-cheat-sheet/
 https://seaborn.pydata.org/index.html
 https://matplotlib.org/
+https://realpython.com/python-matplotlib-guide/
 https://seaborn.pydata.org/generated/seaborn.FacetGrid.html
+https://seaborn.pydata.org/generated/seaborn.distplot.html
+https://www.datacamp.com/community/tutorials/histograms-matplotlib
 https://seaborn.pydata.org/generated/seaborn.pairplot.html
 https://seaborn.pydata.org/generated/seaborn.violinplot.html
 https://matplotlib.org/3.2.1/api/_as_gen/matplotlib.pyplot.subplot.html
@@ -364,3 +371,10 @@ https://seaborn.pydata.org/generated/seaborn.heatmap.html
 https://github.com/matplotlib/matplotlib/issues/14751 
 https://opensource.org/licenses/MIT
 https://stackoverflow.com/questions/24319505/how-can-one-display-images-side-by-side-in-a-github-readme-md
+https://www.youtube.com/watch?v=9lMwjk8jE48 - correlations 1,1,1,1
+https://www.youtube.com/watch?v=BrFEmO-zPuA
+
+
+
+https://medium.com/casual-inference/the-most-time-efficient-ways-to-import-csv-data-in-python-cc159b44063d - pandas importing csv
+https://datacarpentry.org/python-ecology-lesson/02-starting-with-data/
