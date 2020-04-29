@@ -50,12 +50,10 @@ Check if there is any other files that need to be mentioned.##########
 
 ### <span style="color: navy;">README Layout</span> 
 
->
+
 ## 1.  Introduction
 What - This project is an analysis of the well known Iris dataset for the Intoduction to Programming and Scripting module as part fulfilment of the Higher Diploma in Science in Computing (Data Analytics). The project focuses on the widely known Fischer Iris. It requires research and analysis of the dataset and presentation of the findings. The main objective of this analysis is to try and classify the three species of Iris flower by using the four measurements of Sepal width, Sepal length, Petal width and Petal length. The analysis should show if this is possible and will be done in the steps laid out in the README. 
-### **<span style="color: navy;">README Layout</span>**
-### **<span style="color: red;">README Layout</span>**
-### **<span style="color: grey;">README Layout</span>**
+
 ### README Layout
 #### Background - Data Analysis / Fisher / IRIS data
 *This section will include a description of how an analysis/investigation of a dataset is completed and a brief introduction into Ronald Fisher and a look at some of his work.*
@@ -72,19 +70,45 @@ What - This project is an analysis of the well known Iris dataset for the Intodu
 
 ## 2. Background Iris Data
  Multivaraite analysis vs bivariate etc
+ How to analyse/investigate a dataset.
 
-![Iris Flower types](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Flower%202.png?raw=true)
-How to analyse/investigate a dataset.
 
-### R Fisher 
-### Data
-    Data that was wrong and why/how I changed it.
-![Fisher Data Table](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Fischer%20Data%20Table.PNG?raw=true)
 
-The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis"
-The dataset consists of 50 samples from each of three species of IRIS. Four features from each of the species were measured including: Sepal length & width and Petal length & width
-### Assumptions / Analysis
 
+### Ronald Fisher 
+Sir Ronald Fisher (1890-1962) was a British statistician and geneticist, also hailed as the greatest biologist since Charles Darwin he was one of the principal founders of population genetics.. 
+Fisher had a keen interest in [Eugenics](https://www.google.com/search?q=Eugenics&oq=Eugenics&aqs=chrome..69i57j69i61l3&sourceid=chrome&ie=UTF-8). He felt that “socially strong” people should be encouraged to have more children rather that those who were classified as “socially weak” Fishers interest in Eugenics paved the way for his work in the genetics of a population.  He investigated the link between genes for different traits and developed methods of multivariate analysis to complete the analysis. One of the most famous datasets used in Data Science is Fishers Iris Dataset. This dataset comes from his work in discriminant analysis and can be found in “The use of multiple measurements in taxonomic problems” (Fisher, 1936).
+
+<center>
+
+|![Fisher Data Table](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Fischer%20Data%20Table.PNG?raw=true)|
+|:--:| 
+| *Fishers Iris Dataset -“The use of multiple measurements in taxonomic problems” (Fisher, 1936)* |
+
+<div align="left">
+
+### Data Analysis
+Data analysis is a process of analysing a dataset using concepts from statistics & probability and presenting the results in tabular or graphical format. Typically there are three main types of datasets that are analysed. These include Univarite and Bivariate & Multivariate datasets. 
+Univariate data consists of only one variable and is the simplest. It does not allow for analysis of relationships or causes, it is more often used in describing data. Examples of graphical representations are histograms, pie chart and bar charts.
+Bivariate & Multivariate data consists of two or more variables which are classified as dependent or independent. These types of datasets do deal with causes and relationships and looks to find correlations between independent variables that allow the dependant variable to be easily distinguishable. This analysis will be a combination of Univariate and Bivariate. 
+For more information on these click on the links. 
+https://www.geeksforgeeks.org/univariate-bivariate-and-multivariate-data-and-its-analysis/
+https://www.statisticshowto.com/bivariate-analysis/
+
+### Iris Dataset
+The Iris Dataset or “Fishers Iris Dataset” is one of the most recognisable databases found in the data analytics. Fisher's paper “Taxonometric paper” is a classic in the field and is one of the first papers to deal with classification. Whilst Fisher is linked with the dataset Edgar Anderson was actually responsible for collecting the measurements. The dataset is a multivariate dataset consisting of four measurements that would be described as the independent variables [Sepal length & width and Petal length & width] and finally a class as the dependant variable that is split into 3 types of flowers [setosa, versicolor, or virginica] There are 50 measurements of each variable for each of the three classes (i.e. a total of 150 measurements) The image below shows the three flower types and the measurements of each variable. The data should show that one flower type is linearly separable from the others and the remaining two are much more difficult to separate. 
+
+|![Iris Flower types](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Flower%202.png?raw=true)|
+|:--:| 
+| *Iris flowers by species & measurements included in Fishers Dataset* |
+
+https://en.wikipedia.org/wiki/Iris_flower_data_set
+https://archive.ics.uci.edu/ml/datasets/iris 
+
+
+
+### Assumptions
+Data that was wrong and why/how I changed it.
 ## 3. Code
 ### How it was written/ How to run
 #### Python
@@ -200,3 +224,5 @@ Multivariate analysis is an area of statistics which deals with observations tha
 Another class of procedures has been developed for multivariate data which deal with dimensionality reduction. If many measurements are taken on children where each measurement is a measure of intelligence, then it is often the case that these various measures are correlated with each other. If there are 20 measurements for each child, it may be reasonable to look for a few summaries which contain most of the information. These summaries are often expressed as appropriate linear combinations of the measurements. This class of methods is known as principal components and factor analyses.
 
 We describe these methods in a systematic manner starting with a few technical results on the Wishart distribution, which is a multivariate generalization of the chi-squared distribution.
+
+### **<span style="color: navy;">README Layout</span>** 
