@@ -41,10 +41,13 @@ Check if there is any other files that need to be mentioned.##########
 * [1. Introduction](#1-introduction)
     * [README Layout](#readme-layout)
 * [2. Background R Fisher & Iris Data](#2-background-r-fisher--iris-data)
-* [3. Code](#3-code)
-* [4. Analysis of Data](#41-analysis-of-data)
-* [5. License](#5-License)
-* [6. References](#6-references)
+* [3. Code for analysis](#3-Code-for-analysis)
+* [4. Analysis of Data](#4-analysis-of-data)
+* [5. Summary / Conclusions](#5-Summary--Conclusions)
+* [6. Licence](#6-Licence)
+* [7. References](#7-References)
+
+
 
 ## 1.  Introduction
 This project is an analysis of the well known Iris dataset for the Introduction to Programming and Scripting module as part fulfilment of the Higher Diploma in Science in Computing (Data Analytics). The project focuses on the widely known Fischer Iris. It requires research and analysis of the dataset and presentation of the findings. The main objective of this analysis is to try and classify the three species of Iris flower by using the four measurements of Sepal width, Sepal length, Petal width and Petal length. The analysis should show if this is possible and will be done in the steps laid out in the README. 
@@ -53,18 +56,16 @@ This project is an analysis of the well known Iris dataset for the Introduction 
 ### README Layout
 #### [Background - Data Analysis / Fisher / IRIS data](#2-background-r-fisher--iris-data)
 *This section will include a description of how an analysis/investigation of a dataset is completed and a brief introduction into Ronald Fisher and a look at some of his work.*
-#### [Code](#3-code)
+#### [Code for analysis](#3-Code-for-analysis)
 *This section will discuss the code written to complete the analysis. A list of libraries used, instructions on how to run/download the program and details on what the program actually does will also be included.* 
-#### Analysis of Data
+#### [Analysis of Data](#4-analysis-of-data)
 *This section will include discussion and analysis of the **outputs** (plots, histograms & summary files)*
-#### Summary / Outcomes / Conclusions
+#### [Summary / Conclusions](#5-Summary--Conclusions)
 *This section will summarise the analysis section and give conclusions based on the data presented.*
-#### License
+#### [Licence](#6-Licence)
 *Brief description of License used while completing this project.*
-#### References
+#### [References](#7-References)]
 *This section will list all of the references used for research and analysis of Iris dataset*
-
-########## link all of the above ############
 
 ## 2. Background R Fisher & Iris Data
 ### Ronald Fisher 
@@ -123,7 +124,7 @@ To complete the analysis you will first need to download the repository from Git
 
 ---
 ### Python Packages & libraries
-To run the code the following Packages & libraries need to be imported as there are a number of mathematical functions, dataframes, plotting & graph features specific to each library that are required in the analysis. The comments in [iris_funcs.py]() will show them in use but for more information on the packages or libraries see links below.
+To run the code the following Packages & libraries need to be imported as there are a number of mathematical functions, dataframes, plotting & graph features specific to each library that are required in the analysis. The comments in [iris_functs.py]() will show them in use but for more information on the packages or libraries see links below.
 * [Pandas](https://pandas.pydata.org/)
 * [Seaborn](https://seaborn.pydata.org/index.html) 
 * [Matplotlib](https://matplotlib.org/)
@@ -131,22 +132,22 @@ To run the code the following Packages & libraries need to be imported as there 
 
 ---
 ### What the code does
-The two main file that will provide the outputs for the analysis are *[iris_funcs.py]()* and *[2. analysis.py](https://github.com/colmhiggs11/ProandS_Project/blob/master/1.%20analysis.py)*.
+The two main file that will provide the outputs for the analysis are *[iris_functs.py]()* and *[2.analysis.py](https://github.com/colmhiggs11/ProandS_Project/blob/master/2.analysis.py)*.
 
-**iris_funcs.py** -  is made up of functions and script that imports the codes and creates the environment for the analysis to take place. Pandas is used to create the dataframe and import the dataset as Iris.csv. Once the headings are assigned to the rows and variable Data assigned the dataset contents, the five functions are created. 
+**iris_functs.py** -  is made up of functions and script that imports the codes and creates the environment for the analysis to take place. Pandas is used to create the dataframe and import the dataset as Iris.csv. Once the headings are assigned to the rows and variable Data assigned the dataset contents, the five functions are created. 
 
-**2. analysis.py.** - calls the functions from iris_funcs.py and executes script.
+**2.analysis.py.** - calls the functions from iris_functs.py and executes script.
 (*Explantions below*)
 
 ---
-#### iris_func.py
+#### iris_functs.py
 
 ---
 **IrSums():** - This function opens and writes to a text file called summary.txt with a summary of the following for each of the three species types. Mean, Standard deviation, minimum value, 25% percentile, 50% percentile, 75% percentile & maximum values. There is also a statement that will output whether there is any data missing from the dataset.
 ######################### put in links   #########################
 
 
-**StdEmprule():** - This function takes the standard deviation and mean and calculates the probability density funciton using the [Empirical rule](#-standard-deviation-std). An array is created using Numpy so the calculations can be completed and the data then forms a Dataframe for display.
+**StdEmprule(Mestyp3):** - This function takes the standard deviation and mean and calculates the probability density funciton using the [Empirical rule](#-standard-deviation-std). An array is created using Numpy so the calculations can be completed and the data then forms a Dataframe for display. The arguement passed to the function is the type of Iris flower.
 
  **IrHist(Mestyp1):** - This function creates the histograms for each of the four independent variables with data on each histogram shown by species type (assigned as heading[4]). To do this [seaborns FacetGrid](https://seaborn.pydata.org/generated/seaborn.FacetGrid.html) object is initailised and the dataset is mapped onto the single plot. A distribution plot was used with the kde (kernel density estimate) turned off as this calculates the probable density and skews the y-axis values. The rest of the function is just formatting and saving the plots as .png files to the repository. The number of bins used was 25. As there are 50 measurements per species this allows the data to be easily visualised from the histograms. The argument required will be the measurement type otherwise known as one of the four independent variables.
 
@@ -159,7 +160,7 @@ The two main file that will provide the outputs for the analysis are *[iris_func
     ax.set_ylim(len(Iriscorrel)+0.5, -0.5)>
 
 ---
-#### analysis.py
+#### 2.analysis.py
 
 ---
 **Importing Functions and list** - The functions created above were imported and the list assigned to variable heading also imported so that both could be called for execution. (*Shown below*)
