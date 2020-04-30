@@ -36,7 +36,7 @@ def Sctrplt():
     sns.set()
     sns.pairplot(Data,hue=heading[4],aspect=2)
     plt.suptitle("Scatterplot of all possible combinations of Variables")
-    plt.savefig("Scatterplot of variables.png")
+    #plt.savefig("Scatterplot of variables.png")
     plt.clf
     plt.show()
 #Function to create Violinplots for analysis
@@ -81,7 +81,7 @@ def StdEmprule(Mestyp3):
 
     print("Empirical rule data for {}\n".format(Mestyp3),Data121.transpose())
 #print("Correlation of Iris Setosa flower data\n",Data[Data.Species == "Iris-setosa"].corr())
-print("Correlation of Iris versicolor flower data\n",Data[Data.Species == "Iris-versicolor"].corr())
-print("Correlation of Iris virginica flower data\n",Data[Data.Species == "Iris-virginica"].corr())
+#print("Correlation of Iris versicolor flower data\n",Data[Data.Species == "Iris-versicolor"].corr())
+#print("Correlation of Iris virginica flower data\n",Data[Data.Species == "Iris-virginica"].corr())
 
 
