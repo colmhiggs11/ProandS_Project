@@ -404,10 +404,10 @@ https://datacarpentry.org/python-ecology-lesson/02-starting-with-data/
 <div align="center">
 
 
-|llllllllllllllll|
-|:--:|
-|Empirical rule data for Iris-setosa |
 
+
+Empirical rule data for Iris-setosa 
+---
 |Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std|
 |------------ | ------------- | ------------ | ------------- | -------------|------------ |------------ |------------ |                          
 |sepal-length|  4.653510 | 5.358490 | 4.301021 | 5.710979|   3.948531 |  6.063469|
@@ -415,10 +415,9 @@ https://datacarpentry.org/python-ecology-lesson/02-starting-with-data/
 |petal-length|  1.288336|  1.635664 | 1.114672 | 1.809328 |  0.941008  | 1.982992|
 |petal-width|   0.140614 | 0.351386 | 0.035229 | 0.456771 | -0.070157  | 0.562157|
 
-|llllllllllllllll|
-|:--:|
-|Empirical rule data for Iris-versicolor |
 
+Empirical rule data for Iris-versicolor
+---
 |Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std|
 |------------ | ------------- | ------------ | ------------- | -------------|------------ |------------ |------------ |     
 |sepal-length | 5.419829| 6.452171  |4.903658 | 6.968342  | 4.387487|   7.484513|
@@ -427,10 +426,9 @@ https://datacarpentry.org/python-ecology-lesson/02-starting-with-data/
 |petal-width  | 1.128247|  1.523753 | 0.930495 | 1.721505 |  0.732742  | 1.919258|
 
 
-|llllllllllllllll|
-|:--:|
-|Empirical rule data for Iris-versicolor |
 
+Empirical rule data for Iris-versicolor
+---
 |Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std|
 |------------ | ------------- | ------------ | ------------- | -------------|------------ |------------ |------------ |     
 |sepal-length | 5.952120  |7.223880 | 5.316241 | 7.859759  | 4.680361 |  8.495639|
