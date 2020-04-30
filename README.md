@@ -359,33 +359,9 @@ The upper and lower values are calculated by: Upper - adding the third quartile(
 |:--:|
 | *Overall correlation between measurment variables in Iris Dataset* |
 
-
-#### Correlation of Iris Setosa flower data
-Name | sepal-length| sepal-width| petal-length| petal-width
-:------------: | :------------: | :------------: | :------------: | :------------:
-**sepal-length**| 1.000000 |   0.742547  |    0.267176 |   0.278098
-**sepal-width** | 0.742547 |  1.000000  |  0.177700   |  0.232752
-**petal-length**| 0.267176 |   0.177700  |   1.000000  |  0.331630
-**petal-width** | 0.278098 |  0.232752  |   0.331630  |  1.000000
-
----
-#### Correlation of Iris versicolor flower data
-Name | sepal-length| sepal-width| petal-length| petal-width
-:------------: | :------------: | :------------: | :------------: | :------------:
-**sepal-length**| 1.000000 |   0.525911  |    0.754049 |   0.546461
-**sepal-width** | 0.525911 |  1.000000  |  0.560522   |  0.663999
-**petal-length**| 0.754049 |   0.560522  |   1.000000  |  0.786668
-**petal-width** | 0.546461 |  0.663999  |   0.786668  |  1.000000
-
----
-#### Correlation of Iris virginica flower data
-Name | sepal-length| sepal-width| petal-length| petal-width
-:------------: | :------------: | :------------: | :------------: | :------------:
-**sepal-length**| 1.000000 |   0.457228  |    0.864225 |   0.281108
-**sepal-width** | 0.457228 |  1.000000  |  0.401045   |  0.537728
-**petal-length**| 0.864225 |   0.401045  |   1.000000  |  0.322108
-**petal-width** | 0.281108 |  0.537728  |   0.322108  |  1.000000
-
+|![Setosa Corr](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Setosa%20Corr.PNG?raw=true)|![Versicolor Corr](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Versi%20Corr.PNG?raw=true)|![Virginica Corr](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Virgini%20Corr.PNG?raw=true)|
+|:--:|:--:|:--:|
+| *Correlation for Setosa flower* |*Correlation for Setosa flower*|*Correlation for Setosa flower*|
 
 <div align="left">
 
