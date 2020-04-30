@@ -24,7 +24,7 @@ This repository contains the files for the project in the Programming and Script
 * [Plots](https://github.com/colmhiggs11/ProandS_Project/tree/master/Plots) *(Folder containing below outputs)* 
     * [Histogram Plots](https://github.com/colmhiggs11/ProandS_Project/tree/master/Plots/Histogram%20PNG's) *(PNG files required for project)*
     * [Scatter Plot](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Scatterplot%20of%20variables.png?raw=true) *(PNG files required for project)*
-    * [Violin Plot]() ####add link here
+    * [Violin Plot](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Violin%20plot%20of%20variables.png?raw=true)
     * [Correlation Heatmap](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Correlation%20Heatmap.png?raw=true)
 
 * **Other items**
@@ -50,7 +50,7 @@ This repository contains the files for the project in the Programming and Script
 This project is an analysis of the well known Iris dataset for the Introduction to Programming and Scripting module as part fulfilment of the Higher Diploma in Science in Computing (Data Analytics). The project focuses on the widely known Fischer Iris. It requires research and analysis of the dataset and presentation of the findings. The main objective of this analysis is to try and classify the three species of Iris flower by using the four measurements of Sepal width, Sepal length, Petal width and Petal length. The analysis should show if this is possible and will be done in the steps laid out in the README. 
 
 ---
-### README Layout
+### 1.1 README Layout
 #### [Background - Data Analysis / Fisher / IRIS data](#2-background-r-fisher--iris-data)
 *This section will include a description of how an analysis/investigation of a dataset is completed and a brief introduction into Ronald Fisher and a look at some of his work.*
 #### [Code for analysis](#3-Code-for-analysis)
@@ -65,7 +65,7 @@ This project is an analysis of the well known Iris dataset for the Introduction 
 *This section will list all of the references used for research and analysis of Iris dataset*
 
 ## 2. Background R Fisher & Iris Data
-### Ronald Fisher 
+### 2.1 Ronald Fisher 
 Sir Ronald Fisher (1890-1962) was a British statistician and geneticist, also hailed as the greatest biologist since Charles Darwin he was one of the principal founders of population genetics. 
 Fisher had a keen interest in [Eugenics](https://www.google.com/search?q=Eugenics&oq=Eugenics&aqs=chrome..69i57j69i61l3&sourceid=chrome&ie=UTF-8). He felt that “socially strong” people should be encouraged to have more children rather that those who were classified as “socially weak” Fishers interest in Eugenics paved the way for his work in the genetics of a population.  He investigated the link between genes for different traits and developed methods of multivariate analysis to complete the analysis. One of the most famous datasets used in Data Science is Fishers Iris Dataset. This dataset comes from his work in discriminant analysis and can be found in “The use of multiple measurements in taxonomic problems” (Fisher, 1936).
 
@@ -78,7 +78,7 @@ Fisher had a keen interest in [Eugenics](https://www.google.com/search?q=Eugenic
 <div align="left">
 
 ---
-### Data Analysis
+### 2.2 Data Analysis
 Data analysis is a process of analysing a dataset using concepts from statistics & probability and presenting the results in tabular or graphical format. Typically there are three main types of datasets that are analysed. These include Univarite and Bivariate & Multivariate datasets. 
 Univariate data consists of only one variable and is the simplest. It does not allow for analysis of relationships or causes, it is more often used in describing data. Examples of graphical representations are histograms, pie chart and bar charts.
 Bivariate & Multivariate data consists of two or more variables which are classified as dependent or independent. These types of datasets do deal with causes and relationships and looks to find correlations between independent variables that allow the dependant variable to be easily distinguishable. This analysis will be a combination of Univariate and Bivariate. 
@@ -86,14 +86,16 @@ For more information on these click on the links.
 
 
 ---
-### Iris Dataset
+### 2.3 Iris Dataset
 The Iris Dataset or “Fishers Iris Dataset” is one of the most recognisable databases found in the data analytics. Fisher's paper “Taxonometric paper” is a classic in the field and is one of the first papers to deal with classification. Whilst Fisher is linked with the dataset Edgar Anderson was actually responsible for collecting the measurements. The dataset is a multivariate dataset consisting of four measurements that would be described as the independent variables [Sepal length & width and Petal length & width] and finally a class as the dependant variable that is split into 3 types of flowers [setosa, versicolor, or virginica] There are 50 measurements of each variable for each of the three classes (i.e. a total of 150 measurements) The image below shows the three flower types and the measurements of each variable. The data should show that one flower type is linearly separable from the others and the remaining two are much more difficult to separate. 
+
+<div align="center">
 
 |![Iris Flower types](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Flower%202.png?raw=true)|
 |:--:| 
 | *Iris flowers by species & measurements included in Fishers Dataset* |
 
-
+<div align="left">
 
 The dataset used in this analysis was obtained from [UCI archive](https://archive.ics.uci.edu/ml/datasets/iris). There were two errors which required updating the .csv file.
     
@@ -104,17 +106,17 @@ The dataset used in this analysis was obtained from [UCI archive](https://archiv
 
 ## 3. Code for analysis
 
-### How it was written
+### 3.1 How it was written
 The analysis of the Iris dataset will be completed using [Python](https://en.wikipedia.org/wiki/Python_(programming_language)).
 
 The version of python installed on my PC at time of completion of this project is: Python 3.7.4 [MSC v.1915 64 bit (AMD64)] :: Anaconda, Inc. on win32
  
 ---
-### How to run
+### 3.2 How to run
 To complete the analysis you will first need to download the repository from Github, download and install python with anaconda, read the below on what each function/program does and then run. 
 
 ---
-### Python Packages & libraries
+### 3.3 Python Packages & libraries
 To run the code the following Packages & libraries need to be imported as there are a number of mathematical functions, dataframes, plotting & graph features specific to each library that are required in the analysis. The comments in [iris_functs.py]() will show them in use but for more information on the packages or libraries see links below.
 * [Pandas](https://pandas.pydata.org/)
 * [Seaborn](https://seaborn.pydata.org/index.html) 
@@ -122,7 +124,7 @@ To run the code the following Packages & libraries need to be imported as there 
 * [Numpy](https://numpy.org/)
 
 ---
-### What the code does
+### 3.4 What the code does
 The two main file that will provide the outputs for the analysis are *[iris_functs.py](https://github.com/colmhiggs11/ProandS_Project/blob/master/iris_functs.py)* and *[2.analysis.py](https://github.com/colmhiggs11/ProandS_Project/blob/master/2.analysis.py)*.
 
 **iris_functs.py** -  is made up of functions and script that imports the codes and creates the environment for the analysis to take place. Pandas is used to create the dataframe and import the dataset as Iris.csv. Once the headings are assigned to the rows and variable Data assigned the dataset contents, the five functions are created. 
@@ -193,7 +195,7 @@ The two main file that will provide the outputs for the analysis are *[iris_func
     CreateVioplot()
 
 ## 4. Analysis of Data
-### Summary.txt
+### 4.1 Summary.txt
 The summary table below shows the output that can be found in the [summary.txt](https://github.com/colmhiggs11/ProandS_Project/blob/master/summary.txt) file using the describe() function that was executed on per species type of Iris flower. The values for each summary metric are discussed below the table.
 
 <div align="center">
@@ -263,13 +265,17 @@ Shows how much the measurements differ from the mean. Typically if the (std) is 
 
 The Empirical rule for each species and each measurement was completed and is shown in the tables below. Although the tables have six columns of data the data is actually broken into three sections of two columns with ranges for each of the measurements taken. The first two columns show the range that 68% of the data is estimated to be in, the second two columns show the range that 95% of the data is located in and the final two columns show the range that includes 99.7% of the data. 
 
+<div align="center">
+
+| *Standard deviation by measurement variable*  |
+|:-----:|
+
 Name | Comment
 :--------------|:--
 |Sepal-length:|In terms of sepal length 99.7% of the data for each of the flowers fall into the following ranges: **Setosa: 3.9 - 6.06cm**, **Versicolor: 4.38 - 7.48cm** and **Virginica: 4.6 - 8.49cm**|
 |Sepal-width:|In terms of sepal width 99.7% of the data for each of the flowers fall into the following ranges: **Setosa: 2.29 - 4.56cm**, **Versicolor: 1.82 - 3.71cm** and **Virginica: 2.0 - 3.94cm**|
 |Petal-length:|In terms of Petal-length 99.7% of the data for each of the flowers fall into the following ranges: **Setosa: 0.94 - 1.98cm**, **Versicolor: 2.85 - 5.6cm** and **Virginica: 3.89 - 7.20cm**|
 |Petal-width:|In terms of Petal-width 99.7% of the data for each of the flowers fall into the following ranges: **Setosa: -0.07 - 0.56cm**, **Versicolor: 0.73 - 1.9cm** and **Virginica: 1.2 - 2.84cm**|
-
 
 Empirical rule data for Iris-setosa
 
@@ -301,6 +307,8 @@ sepal-width  | 2.651503  |3.296497 | 2.329007 | 3.618993  | 2.006510 |  3.941490
 petal-length | 5.000105  |6.103895 | 4.448211 | 6.655789  | 3.896316 |  7.207684
 petal-width  | 1.751350  |2.300650 | 1.476700 | 2.575300  | 1.202050 |  2.849950
 
+<div align="left">
+
 ---
 #### Minimum
 Shows the minimum values of each measurement for the particular species. Again the minimum data is fairly similar for the Virginica and Versicolor while Setosa's show some differences.
@@ -310,12 +318,11 @@ Shows the minimum values of each measurement for the particular species. Again t
 Shows the number of measurements that fall below the stated percentage. 50% is the median if this value is similar to the mean value then it shows that the data is symmetrically distributed with a low number of datapoints outside the Probable distribution function.
 
 ---
----
 #### Maximum
 Shows the maximum values of each measurement for the particular species. Again the maximum data is fairly similar for the Virginica and Versicolor while Setosa's show some differences.
 
 ---
-### Histograms
+### 4.2 Histograms
 Below shows the histogram plots for each measurement broken out per species. *(To enlarge the graph just click on them.)* The histograms show that for Petal length & width Setosa's are easily distinguishable whereas Virginica and Versicolor are slightly more difficult to differentiate. Also the Sepal measurements don't make it easy to classify the Iris flower type.
 
 
@@ -328,61 +335,57 @@ Below shows the histogram plots for each measurement broken out per species. *(T
 | *Petal Length per Species* |*Petal Width per Species*|
 
 ---
-### Scatterplots
+### 4.3 Scatterplots
+The scatterplot shown below shows all of the possible bivariate relationships and most seperated clusters split by species type. The plots further confirm the ability to classify Setosa's is relatively simple compared to between Virginica and Versicolor.
+
 
 |![Pairplot](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Scatterplot%20of%20variables.png?raw=true)
 |:--:|
-| *Iris flowers by species & measurements included in Fishers Dataset* |
-
-######Update the link for the scatterplot##########
+| *Scatterplot of measurements plotted against eachoher by species* |
 
 ---
-### Violin Plots
+### 4.4 Violin Plots
+The violinplot shows the full distribution of data and makes it easy to spot the outliers when backed up with the dataset. The plot below has a number of features that tell a lot about each of the species. The median is identified as the white dot on the "violin" The [interquartile range](https://towardsdatascience.com/violin-plots-explained-fb1d115e023d) which is the the black bar in the middle of violin and the upper & lower adjacent values identified as the thin black line coming out of the interquartile range bar on the violinplot. 
+The upper and lower values are calculated by: Upper - adding the third quartile(75% percentile) + 1.5 IQR(75% percentile - 25% percentile), Lower - subtracting first quartile(25% percentile) - 1.5 IQR(75% percentile - 25% percentile). Any values that fall outside of these ranges will then be seen as outliers.
 
-|![]()
+|![Violin Plot of four measurements per species](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Violin%20plot%20of%20variables.png?raw=true)
 |:--:|
-| *Iris flowers by species & measurements included in Fishers Dataset* |
-
-######Update the link for the scatterplot##########
+| *Violinplot of four measurement variables per species* |
 
 ---
-### Correlations
+### 4.5 Correlations
 
 |![Heatmap](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Correlation%20Heatmap.png?raw=true)
 |:--:|
-| *Iris flowers by species & measurements included in Fishers Dataset* |
-
-<div align="center">
+| *Overall correlation between measurment variables in Iris Dataset* |
 
 
-## Correlation of Iris Setosa flower data
+#### Correlation of Iris Setosa flower data
 Name | sepal-length| sepal-width| petal-length| petal-width
------------- | ------------- | ------------ | ------------- | -------------
+:------------: | :------------: | :------------: | :------------: | :------------:
 **sepal-length**| 1.000000 |   0.742547  |    0.267176 |   0.278098
 **sepal-width** | 0.742547 |  1.000000  |  0.177700   |  0.232752
 **petal-length**| 0.267176 |   0.177700  |   1.000000  |  0.331630
 **petal-width** | 0.278098 |  0.232752  |   0.331630  |  1.000000
 
 ---
-## Correlation of Iris versicolor flower data
+#### Correlation of Iris versicolor flower data
 Name | sepal-length| sepal-width| petal-length| petal-width
------------- | ------------- | ------------ | ------------- | -------------
+:------------: | :------------: | :------------: | :------------: | :------------:
 **sepal-length**| 1.000000 |   0.525911  |    0.754049 |   0.546461
 **sepal-width** | 0.525911 |  1.000000  |  0.560522   |  0.663999
 **petal-length**| 0.754049 |   0.560522  |   1.000000  |  0.786668
 **petal-width** | 0.546461 |  0.663999  |   0.786668  |  1.000000
 
 ---
-## Correlation of Iris virginica flower data
+#### Correlation of Iris virginica flower data
 Name | sepal-length| sepal-width| petal-length| petal-width
------------- | ------------- | ------------ | ------------- | -------------
+:------------: | :------------: | :------------: | :------------: | :------------:
 **sepal-length**| 1.000000 |   0.457228  |    0.864225 |   0.281108
 **sepal-width** | 0.457228 |  1.000000  |  0.401045   |  0.537728
 **petal-length**| 0.864225 |   0.401045  |   1.000000  |  0.322108
 **petal-width** | 0.281108 |  0.537728  |   0.322108  |  1.000000
 
-
-########check if this is relevant#########
 
 <div align="left">
 
