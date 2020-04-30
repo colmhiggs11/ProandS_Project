@@ -1,13 +1,17 @@
-# This will contain the functions to be used in the analysis program
+# Colm Higgins Iris Data Project
+# This will contain the functions to be used in the analysis program.
+# Import the necessary libraries to complete analysis
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 
+#Define headings and read in data
 heading=["sepal-length","sepal-width","petal-length","petal-width","Species"]
 Data = pd.read_csv('IRIS.csv',names = heading)
 
-
+# Function to open a text file and write summary of dataset into it.
 def IrSums():
     with open('summary.txt', 'w') as f:
         print("Summary of Iris Setosa flower data\n",Data[Data.Species == "Iris-setosa"].describe(),"\n",file = f)
@@ -15,7 +19,7 @@ def IrSums():
         print("Summary of Iris Virginica flower data\n",Data[Data.Species == "Iris-virginica"].describe(),"\n",file = f)
         print(Data.isnull().sum())   
 
-
+# Function to create the Histogram plots using Seaborn FacetGrid
 def IrHist(Mestyp1): 
     sns.set(font_scale=1.25)
     x = sns.FacetGrid(Data,hue = heading[4],height=10 , aspect=2)
@@ -27,7 +31,7 @@ def IrHist(Mestyp1):
     plt.savefig("{}.png".format(Mestyp1))
     plt.clf
     plt.show()
-
+# Function to create Seaborn pairplot
 def Sctrplt():
     sns.set()
     sns.pairplot(Data,hue=heading[4],aspect=2)
@@ -35,7 +39,7 @@ def Sctrplt():
     plt.savefig("Scatterplot of variables.png")
     plt.clf
     plt.show()
-
+#Function to create Violinplots for analysis
 def Vioplots(Mestyp2):
     sns.set(font_scale=1.25)
     plt.subplot(2,2,1)
@@ -48,25 +52,27 @@ def Vioplots(Mestyp2):
     sns.violinplot(heading[4], heading[3], data=Data)
     plt.suptitle("Violin Plot of {} by Species type ".format(Mestyp2))
     plt.show()
-
+#Function to create heatmap correlation for overall data
 def Ir_Corrls():
     Iriscorrel = Data.corr()
     sns.set(font_scale=1.1)
     ax=sns.heatmap(Iriscorrel, annot = True,linewidths=2.5,vmin=-1.1,
                     cmap="coolwarm_r",cbar_kws={'fraction' : 0.01})
+
+    # issue with python version 3.7.4 cutting off axis, fix extends axis.
     ax.set_ylim(len(Iriscorrel)+0.5, -0.5)
+
     plt.yticks(rotation=0)
     plt.tight_layout()
     sns.set(font_scale=1.5)
     plt.title("Correlation between Measurement Variables of Iris Dataset")
     plt.show()
-
+# Function creates tables for 68%/95%/99.7% rule table.
 def StdEmprule(Mestyp3):
     D1 = (Data[Data.Species == Mestyp3].std())
     D2 = (Data[Data.Species == Mestyp3].mean())
     Empheadings = ["68%" "-std","68%" "+std","95%" "-std","95%" "+std","99.7%" "-std","99.7%" "+std"]
-   
-
+   # creating an array to complete calculations
     EmpirRule = (np.array(D2[:4])-np.array(D1[:4]),np.array(D2[:4])+np.array(D1[:4])
             ,np.array(D2[:4])-(np.array(D1[:4]))*2,np.array(D2[:4])+(np.array(D1[:4])*2)
             ,np.array(D2[:4])-(np.array(D1[:4]))*3,np.array(D2[:4])+(np.array(D1[:4])*3))
@@ -74,9 +80,8 @@ def StdEmprule(Mestyp3):
     Data121 = pd.DataFrame(EmpirRule,columns=heading[:4], index =Empheadings )
 
     print("Empirical rule data for {}\n".format(Mestyp3),Data121.transpose())
-
 #print("Correlation of Iris Setosa flower data\n",Data[Data.Species == "Iris-setosa"].corr())
-#print("Correlation of Iris versicolor flower data\n",Data[Data.Species == "Iris-versicolor"].corr())
-#print("Correlation of Iris virginica flower data\n",Data[Data.Species == "Iris-virginica"].corr())
-#print(Data.corr())
+print("Correlation of Iris versicolor flower data\n",Data[Data.Species == "Iris-versicolor"].corr())
+print("Correlation of Iris virginica flower data\n",Data[Data.Species == "Iris-virginica"].corr())
+
 

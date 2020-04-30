@@ -36,15 +36,24 @@ This repository contains the files for the project in the Programming and Script
 
 ## Table of Contents
 * [1. Introduction](#1-introduction)
-    * [README Layout](#readme-layout)
+    * [1.1 README Layout](#11-readme-layout)
 * [2. Background R Fisher & Iris Data](#2-background-r-fisher--iris-data)
+    * [2.1 Ronald Fisher](#21-Ronald-Fisher)
+    * [2.2 Data Analysis](#22-Data-Analysis)
+    * [2.3 Iris Dataset](#23-Iris-Dataset)
 * [3. Code for analysis](#3-Code-for-analysis)
+    * [3.1 How it was written](#31-How-it-was-written)
+    * [3.2 How to run](#32-How-to-run)
+    * [3.3 Python Packages & libraries](#33-Python-Packages--libraries)
 * [4. Analysis of Data](#4-analysis-of-data)
+    * [4.1 Summary.txt](#41-Summarytxt)
+    * [4.2 Histograms](#42-Histograms)
+    * [4.3 Scatterplots](#43-Scatterplots)
+    * [4.4 Violin Plots](#44-Violin-Plots)
+    * [4.5 Correlations](#45-Correlations)
 * [5. Summary / Conclusions](#5-Summary--Conclusions)
 * [6. Licence](#6-Licence)
 * [7. References](#7-References)
-
-
 
 ## 1.  Introduction
 This project is an analysis of the well known Iris dataset for the Introduction to Programming and Scripting module as part fulfilment of the Higher Diploma in Science in Computing (Data Analytics). The project focuses on the widely known Fischer Iris. It requires research and analysis of the dataset and presentation of the findings. The main objective of this analysis is to try and classify the three species of Iris flower by using the four measurements of Sepal width, Sepal length, Petal width and Petal length. The analysis should show if this is possible and will be done in the steps laid out in the README. 
@@ -65,7 +74,7 @@ This project is an analysis of the well known Iris dataset for the Introduction 
 *This section will list all of the references used for research and analysis of Iris dataset*
 
 ## 2. Background R Fisher & Iris Data
-### 2.1 Ronald Fisher 
+### 2.1 Ronald Fisher
 Sir Ronald Fisher (1890-1962) was a British statistician and geneticist, also hailed as the greatest biologist since Charles Darwin he was one of the principal founders of population genetics. 
 Fisher had a keen interest in [Eugenics](https://www.google.com/search?q=Eugenics&oq=Eugenics&aqs=chrome..69i57j69i61l3&sourceid=chrome&ie=UTF-8). He felt that “socially strong” people should be encouraged to have more children rather that those who were classified as “socially weak” Fishers interest in Eugenics paved the way for his work in the genetics of a population.  He investigated the link between genes for different traits and developed methods of multivariate analysis to complete the analysis. One of the most famous datasets used in Data Science is Fishers Iris Dataset. This dataset comes from his work in discriminant analysis and can be found in “The use of multiple measurements in taxonomic problems” (Fisher, 1936).
 
@@ -277,8 +286,9 @@ Name | Comment
 |Petal-length:|In terms of Petal-length 99.7% of the data for each of the flowers fall into the following ranges: **Setosa: 0.94 - 1.98cm**, **Versicolor: 2.85 - 5.6cm** and **Virginica: 3.89 - 7.20cm**|
 |Petal-width:|In terms of Petal-width 99.7% of the data for each of the flowers fall into the following ranges: **Setosa: -0.07 - 0.56cm**, **Versicolor: 0.73 - 1.9cm** and **Virginica: 1.2 - 2.84cm**|
 
-Empirical rule data for Iris-setosa
 
+| *Empirical rule data for Iris-setosa*  |
+|:-----:|
 ---
 Measurement | 68% (mean-std)| 68%(mean-std)| 95%(mean-std(2))| 95%(mean-std(2))|99.7%(mean-std(3))|99.7%(mean-std(3))
 :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------:                     
@@ -287,8 +297,9 @@ sepal-width|   3.048936 | 3.807064|  2.669871 | 4.186129 |  2.290807 |  4.565193
 petal-length|  1.288336|  1.635664 | 1.114672 | 1.809328 |  0.941008  | 1.982992
 petal-width|   0.140614 | 0.351386 | 0.035229 | 0.456771 | -0.070157  | 0.562157
 
-Empirical rule data for Iris-versicolor
 
+| *Empirical rule data for Iris-versicolor*  |
+|:-----:|
 ---
 Measurement | 68% (mean-std)| 68%(mean-std)| 95%(mean-std(2))| 95%(mean-std(2))|99.7%(mean-std(3))|99.7%(mean-std(3))
 :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------:     
@@ -297,8 +308,9 @@ sepal-width   |2.456202 | 3.083798 | 2.142403 | 3.397597  | 1.828605|   3.711395
 petal-length  |3.790089 | 4.729911 | 3.320178 | 5.199822  | 2.850267 |  5.669733
 petal-width  | 1.128247|  1.523753 | 0.930495 | 1.721505 |  0.732742  | 1.919258
 
-Empirical rule data for Iris-versicolor
 
+| *Empirical rule data for Iris-virginica*  |
+|:-----:|
 ---
 Measurement | 68% (mean-std)| 68%(mean-std)| 95%(mean-std(2))| 95%(mean-std(2))|99.7%(mean-std(3))|99.7%(mean-std(3))
 :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------:    
@@ -346,18 +358,38 @@ The scatterplot shown below shows all of the possible bivariate relationships an
 ---
 ### 4.4 Violin Plots
 The violinplot shows the full distribution of data and makes it easy to spot the outliers when backed up with the dataset. The plot below has a number of features that tell a lot about each of the species. The median is identified as the white dot on the "violin" The [interquartile range](https://towardsdatascience.com/violin-plots-explained-fb1d115e023d) which is the the black bar in the middle of violin and the upper & lower adjacent values identified as the thin black line coming out of the interquartile range bar on the violinplot. 
-The upper and lower values are calculated by: Upper - adding the third quartile(75% percentile) + 1.5 IQR(75% percentile - 25% percentile), Lower - subtracting first quartile(25% percentile) - 1.5 IQR(75% percentile - 25% percentile). Any values that fall outside of these ranges will then be seen as outliers.
+The upper and lower values are calculated by: Upper - adding the third quartile(75% percentile) + 1.5 IQR(75% percentile - 25% percentile), Lower - subtracting first quartile(25% percentile) - 1.5 IQR(75% percentile - 25% percentile). Any values that fall outside of these ranges will then be seen as outliers. 
 
 |![Violin Plot of four measurements per species](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Violin%20plot%20of%20variables.png?raw=true)
 |:--:|
 | *Violinplot of four measurement variables per species* |
 
+This table shows the upper & lower adjacent values mentioned above and show some intersting findings. This data shows the potential for being able to differentiate between Virinica's and Versicolors. When the petal length is above 5.5 cm there is a high probability that the flower will be a virginica same with petal width if it is over 2cm it is more likely to be a Virginica.
+
+<div align="center">
+
+| *Upper & Lower adjacent values for Violinplot data for Iris Flowers (cm)* |
+|:-----:|
+
+Measurement | Setosa lower| Setosa upper| Versicolor lower| Versicolor upper|Virginica lower|Virginica upper
+:------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------:                     
+sepal-length|  4.2 | 5.8 | 4.55 | 7.35|   5.2125 | 7.9125
+sepal-width|   2.4875 | 4.3875|  1.8125 | 3.1725 |  2.22575 |  3.7375
+petal-length|  1.1375|  1.8375 | 3.1 | 5.5 |  3.9375  | 7.0375
+petal-width|   0.05 | 0.45 | 0.75 | 1.95 | 1.05  | 3.05
+
+<div align="left">
+
 ---
 ### 4.5 Correlations
+The overall correlations between the measurement variables are shown in the heatmap below. The closer the value is to 1 the more correlated the variables are. This data shows for the whole dataset there is a noticable correlation between petal width and petal length with a value of **0.96**. Petal width & petal length also have a fairly high correlation with sepal length with values of **0.82 & 0.87** respectively.
+
 
 |![Heatmap](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Correlation%20Heatmap.png?raw=true)
 |:--:|
 | *Overall correlation between measurment variables in Iris Dataset* |
+
+The below three tables show the breakdown per species and their unique correlations where something interesting can be seen. As we know already Setosa's can be identified pretty easily by their petal width ad length, they also have a high correlation between Sepal length & Sepal width **0.742**. Versicolor & Virginica are known for being hard to seperate and the correlations back this up but from below it can be seen that Versicolors have one correlation between them and Virginicas that stands out more so than the rest. While both have a high correlation for Petal length and sepal length: Versicolor **0.754** & Virginica **0.864**. The correlation between Petal width and Petal length could be an identifier of which species you are dealing with. Versicolors have a correlation of **0.786** whereas Virginicas **0.322**.
 
 |![Setosa Corr](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Setosa%20Corr.PNG?raw=true)|![Versicolor Corr](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Versi%20Corr.PNG?raw=true)|![Virginica Corr](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Virgini%20Corr.PNG?raw=true)|
 |:--:|:--:|:--:|
@@ -366,8 +398,7 @@ The upper and lower values are calculated by: Upper - adding the third quartile(
 <div align="left">
 
 ## 5. Summary / Conclusions
-Verginicas and versicoulours are difficult to separate
-Attributes that single out particular flower type.
+Taking all of the data into account it is clear to see that the setosa flower is linearly seperable from the virginica and versicolor flowers. To differentiate beteen the two latter flowers takes a lot more time and research has shown that with Machine learning programs the probabilty of being able to determine which species you are dealing with can be completed with a relatively high degree of accuracy. Setosa flowers have a much smaller petal width and petal length than the other two, and while their sepal length is on the smaller side but similar to that of Virginicas and Versicolors, Setosa's sepal width is typicall larger than its rival species. To differentiate between Virginica's and Versicolors you need to look at data and relationships side by side. Although Virginica's typically have a larger petal length and petal width, there is more of a correlation between those two when looking at Versicolors.
 
 ## 6. Licence
 This project was completed using the [MIT License](https://opensource.org/licenses/MIT). Due to the limited restrictions it puts on reuse, it has a high license compatibility.
