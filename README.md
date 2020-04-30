@@ -8,12 +8,9 @@
 <div align="center">
 
 
-Name | ID Number
-:------------:|:-------------:
-Colm Higgins| G00287906
+![Name and Id number](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Name%20number%20box.PNG?raw=true)
 
 
-*##############Look at why table isnt centered##########*
 <div align="left">
 
 ## Information
@@ -91,8 +88,7 @@ Data analysis is a process of analysing a dataset using concepts from statistics
 Univariate data consists of only one variable and is the simplest. It does not allow for analysis of relationships or causes, it is more often used in describing data. Examples of graphical representations are histograms, pie chart and bar charts.
 Bivariate & Multivariate data consists of two or more variables which are classified as dependent or independent. These types of datasets do deal with causes and relationships and looks to find correlations between independent variables that allow the dependant variable to be easily distinguishable. This analysis will be a combination of Univariate and Bivariate. 
 For more information on these click on the links. 
-https://www.geeksforgeeks.org/univariate-bivariate-and-multivariate-data-and-its-analysis/
-https://www.statisticshowto.com/bivariate-analysis/
+
 
 ---
 ### Iris Dataset
@@ -102,11 +98,11 @@ The Iris Dataset or “Fishers Iris Dataset” is one of the most recognisable d
 |:--:| 
 | *Iris flowers by species & measurements included in Fishers Dataset* |
 
-https://en.wikipedia.org/wiki/Iris_flower_data_set
 
-https://archive.ics.uci.edu/ml/datasets/iris  - Explain how had to change the data points.
-This data differs from the data presented in Fishers article (identified by Steve Chadwick, spchadwick '@' espeedaz.net ). The 35th sample should be: 4.9,3.1,1.5,0.2,"Iris-setosa" where the error is in the fourth feature. The 38th sample: 4.9,3.6,1.4,0.1,"Iris-setosa" where the errors are in the second and third features.
 
+The dataset used in this analysis was obtained from [UCI archive](https://archive.ics.uci.edu/ml/datasets/iris). There were two errors which required updating the .csv file.
+    
+    This data differs from the data presented in Fishers article (identified by Steve Chadwick, spchadwick '@' espeedaz.net ). The 35th sample should be: 4.9,3.1,1.5,0.2,"Iris-setosa" where the error is in the fourth feature. The 38th sample: 4.9,3.6,1.4,0.1,"Iris-setosa" where the errors are in the second and third features.
 
 
 ## 3. Code for analysis
@@ -146,7 +142,7 @@ The two main file that will provide the outputs for the analysis are *[iris_func
 ######################### put in links   #########################
 
 
-**StdEmprule():** - This function takes the standard deviation and mean and calculates the probability density funciton using the [Empirical rule](#-summarytxt). An array is created using Numpy so the calculations can be completed and the data then forms a Dataframe for display.
+**StdEmprule():** - This function takes the standard deviation and mean and calculates the probability density funciton using the [Empirical rule](#-standard-deviation-std). An array is created using Numpy so the calculations can be completed and the data then forms a Dataframe for display.
 
  **IrHist(Mestyp1):** - This function creates the histograms for each of the four independent variables with data on each histogram shown by species type (assigned as heading[4]). To do this [seaborns FacetGrid](https://seaborn.pydata.org/generated/seaborn.FacetGrid.html) object is initailised and the dataset is mapped onto the single plot. A distribution plot was used with the kde (kernel density estimate) turned off as this calculates the probable density and skews the y-axis values. The rest of the function is just formatting and saving the plots as .png files to the repository. The number of bins used was 25. As there are 50 measurements per species this allows the data to be easily visualised from the histograms. The argument required will be the measurement type otherwise known as one of the four independent variables.
 
@@ -238,9 +234,8 @@ The summary table below shows the output that can be found in the [summary.txt](
 
 #### Count
 All values clearly show that measuremts were taken on 50 flowers in each of the three species.
-
-Mean - Shows the average measurements taken for each of the flower types. 
-
+#### Mean
+Shows the average measurements taken for each of the flower types. 
 |Name | Comment|
 |:--|:--|
 |Sepal-length:|This is the measurement with the least variation across all of the Iris flowers ranging from 5-6.58 cm for with Setosa being the smallest and Virginica the largest.|
@@ -248,21 +243,16 @@ Mean - Shows the average measurements taken for each of the flower types.
 |Petal-length:|The average petal length across the three flowers shows some interesting results. Whilst Virginica and Versicolor don't differ greatly *(range of 4.26-5.55cm)* the Setosa flower shows some significant uniques qualities. It's average petal length is much smaller at 1.46 cm|
 |Petal-width:|Whilst the average measurements for petal width are smaller than the petal length, they do show similar traits to petal width where Virginica and Versicolor don't differ greatly and the Setosa flower average is much lower.|
 
-
-Standard Deviation (Std) - Shows how much the measurements differ from the mean. Typically if the (std) is low then the data would be seen to be clustered relatively closely around the mean. A high Std suggests that the data is more dispersed and would have a larger range. It also allows for the calculation of the Probability density function. Using the [Empirical or 68,95,99.7 Rule](https://towardsdatascience.com/understanding-the-68-95-99-7-rule-for-a-normal-distribution-b7b7cbf760c2) the percentage of values that fall within one and three standard deviations of the mean can be calculated. See graph below.
+#### Standard Deviation (Std)
+Shows how much the measurements differ from the mean. Typically if the (std) is low then the data would be seen to be clustered relatively closely around the mean. A high Std suggests that the data is more dispersed and would have a larger range. It also allows for the calculation of the Probability density function the formula shown below. Using the [Empirical or 68,95,99.7 Rule](https://towardsdatascience.com/understanding-the-68-95-99-7-rule-for-a-normal-distribution-b7b7cbf760c2) the percentage of values that fall within one and three standard deviations of the mean can be calculated. See graph below.
 
 <div align="center">
 
-|![Standard deviation table](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Standard%20Deviation.png?raw=true)|
-|:--:| 
-| *Empirical rule distribution* |
+|![Standard deviation table](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Standard%20Deviation.png?raw=true)|![Probability Density formula](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Probability%20Density.PNG?raw=true)|
+|:--:|:--:|
+| *Empirical rule distribution*  | *Probability Density formula* |
 
 
-|![Probability Density formula](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Probability%20Density.PNG?raw=true)|
-|:--:| 
-| *[Probability Density formula* |
-
-#############################
 <div align="left">
 
 The Empirical rule for each species and each measurement was completed and is shown in the tables below. Although the tables have six columns of data the data is actually broken into three sections of two columns with ranges for each of the measurements taken. The first two columns show the range that 68% of the data is estimated to be in, the second two columns show the range that 95% of the data is located in and the final two columns show the range that includes 99.7% of the data. 
@@ -273,7 +263,6 @@ Name | Comment
 |Sepal-width:|In terms of sepal width 99.7% of the data for each of the flowers fall into the following ranges: **Setosa: 2.29 - 4.56cm**, **Versicolor: 1.82 - 3.71cm** and **Virginica: 2.0 - 3.94cm**|
 |Petal-length:|In terms of Petal-length 99.7% of the data for each of the flowers fall into the following ranges: **Setosa: 0.94 - 1.98cm**, **Versicolor: 2.85 - 5.6cm** and **Virginica: 3.89 - 7.20cm**|
 |Petal-width:|In terms of Petal-width 99.7% of the data for each of the flowers fall into the following ranges: **Setosa: -0.07 - 0.56cm**, **Versicolor: 0.73 - 1.9cm** and **Virginica: 1.2 - 2.84cm**|
-
 
 
 Empirical rule data for Iris-setosa
