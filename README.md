@@ -154,7 +154,7 @@ The two main file that will provide the outputs for the analysis are *[iris_func
 
     ax.set_ylim(len(Iriscorrel)+0.5, -0.5)>
 
-########### look at maybe centering above #############
+########### look at maybe centering above ############# also ad in std graph
 
 ---
 #### analysis.py
@@ -162,11 +162,11 @@ The two main file that will provide the outputs for the analysis are *[iris_func
 ---
 **Importing Functions and list** - The functions created above were imported and the list assigned to variable heading also imported so that both could be called for execution. (*Shown below*)
 
-    import iris_funcs as ifs
-    from iris_funcs import heading
+    import iris_functs as ifs
+    from iris_functs import heading
 
 **Calling functions** - Each of the functions were then called. Some required using the list **"heading"** to be passed through as the argument. (*Shown below*)
-
+###########add in std fnc###################
     ifs.IrSums()
     ifs.Sctrplt()
     ifs.Ir_Corrls()
@@ -221,6 +221,7 @@ The summary table below shows the output that can be found in the [summary.txt](
     75%         6.90000     3.175000      5.875000      2.30000
     max         7.90000     3.800000      6.900000      2.50000
 
+
 <div align="left">
 
 Count - All values clearly show that measuremts were taken on 50 flowers in each of the three species.
@@ -230,12 +231,12 @@ Mean - Shows the average measurements taken for each of the flower types.
 |Name | Comment|
 |:--|:--|
 |Sepal-length:|This is the measurement with the least variation across all of the Iris flowers ranging from 5-6.58 cm for with Setosa being the smallest and Virginica the largest.|
-|Sepal-width:|This meaasurement is shows very little variation between Virginica and Versicolor and also is the only average measurement where the Setosa flower is larger than the other two|
+|Sepal-width:|This measurement is shows very little variation between Virginica and Versicolor and also is the only average measurement where the Setosa flower is larger than the other two|
 |Petal-length:|The average petal length across the three flowers shows some interesting results. Whilst Virginica and Versicolor don't differ greatly *(range of 4.26-5.55cm)* the Setosa flower shows some significant uniques qualities. It's average petal length is much smaller at 1.46 cm|
 |Petal-width:|Whilst the average measurements for petal width are smaller than the petal length, they do show similar traits to petal width where Virginica and Versicolor don't differ greatly and the Setosa flower average is much lower.|
 
 
-Standard Deviation (Std) - Shows how much the measurements differ from the mean. Typically if the (std) is low then the data would be seen to be clustered relatively closely around the mean. A high Std suggests that the data is more dispersed and would have a larger range. It also allows for the calculation of the normal distribution. Using the [Empirical or 68,95,99.7 Rule](https://towardsdatascience.com/understanding-the-68-95-99-7-rule-for-a-normal-distribution-b7b7cbf760c2) the percentage of values that fall within one and three standard deviations of the mean can be calculated. See graph below.
+Standard Deviation (Std) - Shows how much the measurements differ from the mean. Typically if the (std) is low then the data would be seen to be clustered relatively closely around the mean. A high Std suggests that the data is more dispersed and would have a larger range. It also allows for the calculation of the Probability density function. Using the [Empirical or 68,95,99.7 Rule](https://towardsdatascience.com/understanding-the-68-95-99-7-rule-for-a-normal-distribution-b7b7cbf760c2) the percentage of values that fall within one and three standard deviations of the mean can be calculated. See graph below.
 
 <center>
 
@@ -243,30 +244,61 @@ Standard Deviation (Std) - Shows how much the measurements differ from the mean.
 |:--:| 
 | *Empirical rule distribution* |
 
+<div align="left">
+
+The Empirical rule for each species and each measurement was completed and is shown in the tables below. Although the tables have six columns of data the data is actually broken into three sections of two columns with ranges for each of the measurements taken. The first two columns show the range that 68% of the data is estimated to be in, the second two columns show the range that 95% of the data is located in and the final two columns show the range that includes 99.7% of the data. 
+
+|Name | Comment|
+|:--|:--|
+|Sepal-length:|In terms of sepal length 99.7% of the data for each of the flowers fall into the following ranges: **Setosa: 3.9 - 6.06cm**, **Versicolor: 4.38 - 7.48cm** and **Virginica: 4.6 - 8.49cm**|
+|Sepal-width:|In terms of sepal width 99.7% of the data for each of the flowers fall into the following ranges: **Setosa: 2.29 - 4.56cm**, **Versicolor: 1.82 - 3.71cm** and **Virginica: 2.0 - 3.94cm**|
+|Petal-length:|In terms of Petal-length 99.7% of the data for each of the flowers fall into the following ranges: **Setosa: 0.94 - 1.98cm**, **Versicolor: 2.85 - 5.6cm** and **Virginica: 3.89 - 7.20cm**|
+|Petal-width:|In terms of Petal-width 99.7% of the data for each of the flowers fall into the following ranges: **Setosa: -0.07 - 0.56cm**, **Versicolor: 0.73 - 1.9cm** and **Virginica: 1.2 - 2.84cm**|
 
 
+<div align="center">
 
+Empirical rule data for Iris-setosa 
+---
 
+Measurement | 68% (mean-std)| 68%(mean-std)| 95%(mean-std(2))| 95%(mean-std(2))|99.7%(mean-std(3))|99.7%(mean-std(3))
+------------ | ------------- | ------------ | ------------- | -------------|------------ |------------                     
+sepal-length|  4.653510 | 5.358490 | 4.301021 | 5.710979|   3.948531 |  6.063469
+sepal-width|   3.048936 | 3.807064|  2.669871 | 4.186129 |  2.290807 |  4.565193
+petal-length|  1.288336|  1.635664 | 1.114672 | 1.809328 |  0.941008  | 1.982992
+petal-width|   0.140614 | 0.351386 | 0.035229 | 0.456771 | -0.070157  | 0.562157
 
+Empirical rule data for Iris-versicolor
+---
+
+Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std
+------------ | ------------- | ------------ | ------------- | -------------|------------ |------------
+sepal-length | 5.419829| 6.452171  |4.903658 | 6.968342  | 4.387487|   7.484513
+sepal-width   |2.456202 | 3.083798 | 2.142403 | 3.397597  | 1.828605|   3.711395
+petal-length  |3.790089 | 4.729911 | 3.320178 | 5.199822  | 2.850267 |  5.669733
+petal-width  | 1.128247|  1.523753 | 0.930495 | 1.721505 |  0.732742  | 1.919258
+
+Empirical rule data for Iris-versicolor
+---
+
+|Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std|
+------------ | ------------- | ------------ | ------------- | -------------|------------ |------------   
+sepal-length | 5.952120  |7.223880 | 5.316241 | 7.859759  | 4.680361 |  8.495639
+sepal-width  | 2.651503  |3.296497 | 2.329007 | 3.618993  | 2.006510 |  3.941490
+petal-length | 5.000105  |6.103895 | 4.448211 | 6.655789  | 3.896316 |  7.207684
+petal-width  | 1.751350  |2.300650 | 1.476700 | 2.575300  | 1.202050 |  2.849950
 
 
 <div align="left">
 
-Minimum - Petal length & Petal width 
+Minimum - Shows the minimum values of each measurement for the particular species. Again the minimum data is fairly similar for the Virginica and Versicolor while Setosa's show some differences.
 
-percentiles
-50% is the median
+Percentiles - Shows the number of measurements that fall below the stated percentage. 50% is the median if this value is similar to the mean value then it shows that the data is symmetrically distributed with a low number of datapoints outside the Probable distribution function.
 
-    For all the species, the respective values of the mean and median of it’s features are found to be pretty close. This indicates that data is nearly symmetrically distributed with very less presence of outliers. Box plot(explained later) is one of the best statistical tool used for outlier detection in the data.
-
-
-max
-
-
+Maximum - Shows the maximum values of each measurement for the particular species. Again the maximum data is fairly similar for the Virginica and Versicolor while Setosa's show some differences.
 
 ---
 ### Histograms
-
 
 |![hist](https://github.com/colmhiggs11/ProandS_Project/blob/master/petal-length.png?raw=true)|![hist](https://github.com/colmhiggs11/ProandS_Project/blob/master/petal-length.png?raw=true)|
 |:--:|:--:|
@@ -400,41 +432,3 @@ This project was completed using the [MIT License](https://opensource.org/licens
 
 https://medium.com/casual-inference/the-most-time-efficient-ways-to-import-csv-data-in-python-cc159b44063d - pandas importing csv
 https://datacarpentry.org/python-ecology-lesson/02-starting-with-data/
-
-<div align="center">
-
-
-
-
-Empirical rule data for Iris-setosa 
----
-
-Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std
------------- | ------------- | ------------ | ------------- | -------------|------------ |------------                     
-sepal-length|  4.653510 | 5.358490 | 4.301021 | 5.710979|   3.948531 |  6.063469
-sepal-width|   3.048936 | 3.807064|  2.669871 | 4.186129 |  2.290807 |  4.565193
-petal-length|  1.288336|  1.635664 | 1.114672 | 1.809328 |  0.941008  | 1.982992
-petal-width|   0.140614 | 0.351386 | 0.035229 | 0.456771 | -0.070157  | 0.562157
-
-
-Empirical rule data for Iris-versicolor
----
-
-Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std
------------- | ------------- | ------------ | ------------- | -------------|------------ |------------
-sepal-length | 5.419829| 6.452171  |4.903658 | 6.968342  | 4.387487|   7.484513
-sepal-width   |2.456202 | 3.083798 | 2.142403 | 3.397597  | 1.828605|   3.711395
-petal-length  |3.790089 | 4.729911 | 3.320178 | 5.199822  | 2.850267 |  5.669733
-petal-width  | 1.128247|  1.523753 | 0.930495 | 1.721505 |  0.732742  | 1.919258
-
-
-
-Empirical rule data for Iris-versicolor
----
-
-|Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std|
------------- | ------------- | ------------ | ------------- | -------------|------------ |------------   
-sepal-length | 5.952120  |7.223880 | 5.316241 | 7.859759  | 4.680361 |  8.495639
-sepal-width  | 2.651503  |3.296497 | 2.329007 | 3.618993  | 2.006510 |  3.941490
-petal-length | 5.000105  |6.103895 | 4.448211 | 6.655789  | 3.896316 |  7.207684
-petal-width  | 1.751350  |2.300650 | 1.476700 | 2.575300  | 1.202050 |  2.849950
