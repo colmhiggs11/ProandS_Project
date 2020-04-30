@@ -7,9 +7,10 @@
 
 <div align="center">
 
-|Name | ID Number|
-|:------------:|:-------------:|
-|Colm Higgins| G00287906|
+
+Name | ID Number
+:------------:|:-------------:
+Colm Higgins| G00287906
 
 
 *##############Look at why table isnt centered##########*
@@ -238,11 +239,17 @@ Mean - Shows the average measurements taken for each of the flower types.
 
 Standard Deviation (Std) - Shows how much the measurements differ from the mean. Typically if the (std) is low then the data would be seen to be clustered relatively closely around the mean. A high Std suggests that the data is more dispersed and would have a larger range. It also allows for the calculation of the Probability density function. Using the [Empirical or 68,95,99.7 Rule](https://towardsdatascience.com/understanding-the-68-95-99-7-rule-for-a-normal-distribution-b7b7cbf760c2) the percentage of values that fall within one and three standard deviations of the mean can be calculated. See graph below.
 
-<center>
+<div align="center">
 
 |![Standard deviation table](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Standard%20Deviation.png?raw=true)|
 |:--:| 
 | *Empirical rule distribution* |
+
+
+|![Probability Density formula](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Probability%20Density.PNG?raw=true)|
+|:--:| 
+| *[Probability Density formula* |
+
 
 <div align="left">
 
@@ -256,7 +263,6 @@ The Empirical rule for each species and each measurement was completed and is sh
 |Petal-width:|In terms of Petal-width 99.7% of the data for each of the flowers fall into the following ranges: **Setosa: -0.07 - 0.56cm**, **Versicolor: 0.73 - 1.9cm** and **Virginica: 1.2 - 2.84cm**|
 
 
-<div align="center">
 
 Empirical rule data for Iris-setosa 
 ---
@@ -271,8 +277,8 @@ petal-width|   0.140614 | 0.351386 | 0.035229 | 0.456771 | -0.070157  | 0.562157
 Empirical rule data for Iris-versicolor
 ---
 
-Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std
------------- | ------------- | ------------ | ------------- | -------------|------------ |------------
+Measurement | 68% (mean-std)| 68%(mean-std)| 95%(mean-std(2))| 95%(mean-std(2))|99.7%(mean-std(3))|99.7%(mean-std(3))
+------------ | ------------- | ------------ | ------------- | -------------|------------ |------------   
 sepal-length | 5.419829| 6.452171  |4.903658 | 6.968342  | 4.387487|   7.484513
 sepal-width   |2.456202 | 3.083798 | 2.142403 | 3.397597  | 1.828605|   3.711395
 petal-length  |3.790089 | 4.729911 | 3.320178 | 5.199822  | 2.850267 |  5.669733
@@ -281,15 +287,13 @@ petal-width  | 1.128247|  1.523753 | 0.930495 | 1.721505 |  0.732742  | 1.919258
 Empirical rule data for Iris-versicolor
 ---
 
-|Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std|
+Measurement | 68% (mean-std)| 68%(mean-std)| 95%(mean-std(2))| 95%(mean-std(2))|99.7%(mean-std(3))|99.7%(mean-std(3))
 ------------ | ------------- | ------------ | ------------- | -------------|------------ |------------   
 sepal-length | 5.952120  |7.223880 | 5.316241 | 7.859759  | 4.680361 |  8.495639
 sepal-width  | 2.651503  |3.296497 | 2.329007 | 3.618993  | 2.006510 |  3.941490
 petal-length | 5.000105  |6.103895 | 4.448211 | 6.655789  | 3.896316 |  7.207684
 petal-width  | 1.751350  |2.300650 | 1.476700 | 2.575300  | 1.202050 |  2.849950
 
-
-<div align="left">
 
 Minimum - Shows the minimum values of each measurement for the particular species. Again the minimum data is fairly similar for the Virginica and Versicolor while Setosa's show some differences.
 

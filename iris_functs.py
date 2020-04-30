@@ -59,6 +59,7 @@ def Ir_Corrls():
     plt.tight_layout()
     sns.set(font_scale=1.5)
     plt.title("Correlation between Measurement Variables of Iris Dataset")
+    plt.savefig("Correlation Heatmap.png")
     plt.show()
 
 def StdEmprule(Mestyp3):

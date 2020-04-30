@@ -4,13 +4,16 @@ import iris_functs as ifs
 from iris_functs import heading,Data
 
 #ifs.IrSums()
+
 def Emprule():
   ifs.StdEmprule("Iris-setosa")
   ifs.StdEmprule("Iris-versicolor")
   ifs.StdEmprule("Iris-virginica")
 #Emprule()
+
 #ifs.Sctrplt()
-#ifs.Ir_Corrls()
+
+ifs.Ir_Corrls()
 
 
 def Createhist():
