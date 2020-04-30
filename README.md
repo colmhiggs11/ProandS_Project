@@ -19,7 +19,7 @@ This repository contains the files for the project in the Programming and Script
 * [README.md](https://github.com/colmhiggs11/ProandS_Project/blob/master/README.md) *(Description and Analysis of the project)*
 * [IRIS.csv](https://github.com/colmhiggs11/ProandS_Project/blob/master/IRIS.csv) *(Data File)*
 * [2.analysis.py](https://github.com/colmhiggs11/ProandS_Project/blob/master/2.analysis.py) *(Program/Script to run functions)*
-* [iris_functs](https://github.com/colmhiggs11/ProandS_Project/blob/master/iris_functs.py) *(Functions of code created to be called in main **[2.analysis.py]** file )*
+* [iris_functs](https://github.com/colmhiggs11/ProandS_Project/blob/master/iris_functs.py) *(Functions of code created to be called in main **2.analysis.py** file )*
 * [Summary.txt](https://github.com/colmhiggs11/ProandS_Project/blob/master/summary.txt) *(Output of summary required for project)*
 * [Plots](https://github.com/colmhiggs11/ProandS_Project/tree/master/Plots) *(Folder containing below outputs)* 
     * [Histogram Plots](https://github.com/colmhiggs11/ProandS_Project/tree/master/Plots/Histogram%20PNG's) *(PNG files required for project)*
@@ -35,7 +35,7 @@ This repository contains the files for the project in the Programming and Script
 
 
 ## Table of Contents
-* [1. Introduction](#1-introduction)
+* [1. Introduction](#1-Introduction)
     * [1.1 README Layout](#11-readme-layout)
 * [2. Background R Fisher & Iris Data](#2-background-r-fisher--iris-data)
     * [2.1 Ronald Fisher](#21-Ronald-Fisher)
@@ -68,10 +68,6 @@ This project is an analysis of the well known Iris dataset for the Introduction 
 *This section will include discussion and analysis of the **outputs** (plots, histograms & summary files)*
 #### [Summary / Conclusions](#5-Summary--Conclusions)
 *This section will summarise the analysis section and give conclusions based on the data presented.*
-#### [Licence](#6-Licence)
-*Brief description of License used while completing this project.*
-#### [References](#7-References)]
-*This section will list all of the references used for research and analysis of Iris dataset*
 
 ## 2. Background R Fisher & Iris Data
 ### 2.1 Ronald Fisher
@@ -289,8 +285,9 @@ Name | Comment
 
 | *Empirical rule data for Iris-setosa*  |
 |:-----:|
+
 ---
-Measurement | 68% (mean-std)| 68%(mean-std)| 95%(mean-std(2))| 95%(mean-std(2))|99.7%(mean-std(3))|99.7%(mean-std(3))
+Measurement | 68% (mean-std)| 68% (mean+std)| 95% (mean-std(2))| 95% (mean+std(2))|99.7% (mean-std(3))|99.7% (mean+std(3))
 :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------:                     
 sepal-length|  4.653510 | 5.358490 | 4.301021 | 5.710979|   3.948531 |  6.063469
 sepal-width|   3.048936 | 3.807064|  2.669871 | 4.186129 |  2.290807 |  4.565193
@@ -300,8 +297,9 @@ petal-width|   0.140614 | 0.351386 | 0.035229 | 0.456771 | -0.070157  | 0.562157
 
 | *Empirical rule data for Iris-versicolor*  |
 |:-----:|
+
 ---
-Measurement | 68% (mean-std)| 68%(mean-std)| 95%(mean-std(2))| 95%(mean-std(2))|99.7%(mean-std(3))|99.7%(mean-std(3))
+Measurement | 68% (mean-std)| 68% (mean+std)| 95% (mean-std(2))| 95% (mean+std(2))|99.7% (mean-std(3))|99.7% (mean+std(3))
 :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------:     
 sepal-length | 5.419829| 6.452171  |4.903658 | 6.968342  | 4.387487|   7.484513
 sepal-width   |2.456202 | 3.083798 | 2.142403 | 3.397597  | 1.828605|   3.711395
@@ -311,8 +309,9 @@ petal-width  | 1.128247|  1.523753 | 0.930495 | 1.721505 |  0.732742  | 1.919258
 
 | *Empirical rule data for Iris-virginica*  |
 |:-----:|
+
 ---
-Measurement | 68% (mean-std)| 68%(mean-std)| 95%(mean-std(2))| 95%(mean-std(2))|99.7%(mean-std(3))|99.7%(mean-std(3))
+Measurement | 68% (mean-std)| 68% (mean+std)| 95% (mean-std(2))| 95% (mean+std(2))|99.7% (mean-std(3))|99.7% (mean+std(3))
 :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------:    
 sepal-length | 5.952120  |7.223880 | 5.316241 | 7.859759  | 4.680361 |  8.495639
 sepal-width  | 2.651503  |3.296497 | 2.329007 | 3.618993  | 2.006510 |  3.941490
@@ -335,7 +334,7 @@ Shows the maximum values of each measurement for the particular species. Again t
 
 ---
 ### 4.2 Histograms
-Below shows the histogram plots for each measurement broken out per species. *(To enlarge the graph just click on them.)* The histograms show that for Petal length & width Setosa's are easily distinguishable whereas Virginica and Versicolor are slightly more difficult to differentiate. Also the Sepal measurements don't make it easy to classify the Iris flower type.
+Below shows the histogram plots for each measurement broken out per species. *(To enlarge the graph just click on them.)* The histograms show that for Petal length & width Setosa's are easily distinguishable whereas Virginica and Versicolor are slightly more difficult to differentiate. Also the Sepal measurements don't make it easy to classify the Iris flower type. The petal length and width of the Setosa's make them much easier to distinguish from the other two species. It is almost certain that if the petal width is below 0.95cm or the petal length is below 2cm then the species you are dealing with is a Setosa.
 
 
 |![hist](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Histogram%20PNG's/sepal-length.png?raw=true)|![hist](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Histogram%20PNG's/sepal-width.png?raw=true)|
@@ -348,7 +347,7 @@ Below shows the histogram plots for each measurement broken out per species. *(T
 
 ---
 ### 4.3 Scatterplots
-The scatterplot shown below shows all of the possible bivariate relationships and most seperated clusters split by species type. The plots further confirm the ability to classify Setosa's is relatively simple compared to between Virginica and Versicolor.
+The scatterplot shown below shows all of the possible bivariate relationships and most seperated clusters split by species type. The plots further confirm the ability to classify Setosa's is relatively simple compared to between Virginica and Versicolor. The Setosa flower is linearly seperable from the Virginica and Versicolor.
 
 
 |![Pairplot](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Scatterplot%20of%20variables.png?raw=true)
@@ -367,7 +366,6 @@ The upper and lower values are calculated by: Upper - adding the third quartile(
 This table shows the upper & lower adjacent values mentioned above and show some intersting findings. This data shows the potential for being able to differentiate between Virinica's and Versicolors. When the petal length is above 5.5 cm there is a high probability that the flower will be a virginica same with petal width if it is over 2cm it is more likely to be a Virginica.
 
 <div align="center">
-
 | *Upper & Lower adjacent values for Violinplot data for Iris Flowers (cm)* |
 |:-----:|
 
@@ -428,9 +426,9 @@ This project was completed using the [MIT License](https://opensource.org/licens
 23.	https://github.com/matplotlib/matplotlib/issues/14751 
 24.	https://opensource.org/licenses/MIT
 25.	https://stackoverflow.com/questions/24319505/how-can-one-display-images-side-by-side-in-a-github-readme-md
-26.	https://www.youtube.com/watch?v=9lMwjk8jE48 - correlations 1,1,1,1
+26.	https://www.youtube.com/watch?v=9lMwjk8jE48
 27.	https://www.youtube.com/watch?v=BrFEmO-zPuA
 28. https://towardsdatascience.com/understanding-the-68-95-99-7-rule-for-a-normal-distribution-b7b7cbf760c2
 29. https://numpy.org/
-30. https://medium.com/casual-inference/the-most-time-efficient-ways-to-import-csv-data-in-python-cc159b44063d - pandas importing csv
+30. https://medium.com/casual-inference/the-most-time-efficient-ways-to-import-csv-data-in-python-cc159b44063d 
 
