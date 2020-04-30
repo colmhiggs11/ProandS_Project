@@ -18,17 +18,17 @@ This repository contains the files for the project in the Programming and Script
 
 * [README.md](https://github.com/colmhiggs11/ProandS_Project/blob/master/README.md) *(Description and Analysis of the project)*
 * [IRIS.csv](https://github.com/colmhiggs11/ProandS_Project/blob/master/IRIS.csv) *(Data File)*
-* [2. analysis.py](https://github.com/colmhiggs11/ProandS_Project/blob/master/1.%20analysis.py) *(Program/Script to run functions)*
-* [iris_funcs](https://github.com/colmhiggs11/ProandS_Project/blob/master/iris_funcs.py) *(Functions of code created to be called in main **[analysis.py](https://github.com/colmhiggs11/ProandS_Project/blob/master/1.%20analysis.py)** file )*
+* [2.analysis.py](https://github.com/colmhiggs11/ProandS_Project/blob/master/2.analysis.py) *(Program/Script to run functions)*
+* [iris_functs](https://github.com/colmhiggs11/ProandS_Project/blob/master/iris_functs.py) *(Functions of code created to be called in main **[2.analysis.py]** file )*
 * [Summary.txt](https://github.com/colmhiggs11/ProandS_Project/blob/master/summary.txt) *(Output of summary required for project)*
-* [Plots]() *(Folder containing below outputs)* 
-    * Histogram Plots *(PNG files required for project)*
-    * Scatter Plots *(PNG files required for project)*
-    * Violin Plots
-    * Correlation Heatmap
+* [Plots](https://github.com/colmhiggs11/ProandS_Project/tree/master/Plots) *(Folder containing below outputs)* 
+    * [Histogram Plots](https://github.com/colmhiggs11/ProandS_Project/tree/master/Plots/Histogram%20PNG's) *(PNG files required for project)*
+    * [Scatter Plot](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Scatterplot%20of%20variables.png?raw=true) *(PNG files required for project)*
+    * [Violin Plot]()
+    * [Correlation Heatmap](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Correlation%20Heatmap.png?raw=true)
 
 * **Other items**
-    * [Project Plan](https://github.com/colmhiggs11/ProandS_Project/blob/master/Programming%20Project%20Plan%20rev2.png?raw=true) *(Latest revision of the Project Plan - Broken down into sections with completion status)*
+    * [Project Plan](https://github.com/colmhiggs11/ProandS_Project/tree/master/Project%20Planning) *(Latest revision of the Project Plan - Broken down into sections with completion status)*
     * [Images used in the README.md](https://github.com/colmhiggs11/ProandS_Project/tree/master/Pictures%20for%20README)
     * [License](https://github.com/colmhiggs11/ProandS_Project/blob/master/LICENSE) *(MIT License)*
     * .gitignore
@@ -102,7 +102,11 @@ The Iris Dataset or “Fishers Iris Dataset” is one of the most recognisable d
 
 The dataset used in this analysis was obtained from [UCI archive](https://archive.ics.uci.edu/ml/datasets/iris). There were two errors which required updating the .csv file.
     
-    This data differs from the data presented in Fishers article (identified by Steve Chadwick, spchadwick '@' espeedaz.net ). The 35th sample should be: 4.9,3.1,1.5,0.2,"Iris-setosa" where the error is in the fourth feature. The 38th sample: 4.9,3.6,1.4,0.1,"Iris-setosa" where the errors are in the second and third features.
+    This data differs from the data presented in Fishers article
+    (identified by Steve Chadwick, spchadwick '@' espeedaz.net ).
+    The 35th sample should be: 4.9,3.1,1.5,0.2,"Iris-setosa" where
+    the error is in the fourth feature. The 38th sample: 4.9,3.6,1.4,0.1,
+    "Iris-setosa" where the errors are in the second and third features.
 
 
 ## 3. Code for analysis
@@ -111,8 +115,7 @@ The dataset used in this analysis was obtained from [UCI archive](https://archiv
 The analysis of the Iris dataset will be completed using [Python](https://en.wikipedia.org/wiki/Python_(programming_language)).
 
 The version of python installed on my PC at time of completion of this project is: Python 3.7.4 (default, Aug  9 2019, 18:34:13) [MSC v.1915 64 bit (AMD64)] :: Anaconda, Inc. on win32
-http://anh.cs.luc.edu/handsonPythonTutorial/ch1.html
-https://wiki.python.org/moin/BeginnersGuide/Programmers 
+ 
 
 ---
 ### How to run
@@ -120,10 +123,11 @@ To complete the analysis you will first need to download the repository from Git
 
 ---
 ### Python Packages & libraries
-To run the code the following Packages & libraries need to be imported as there are a number of functions, dataframes, plotting & graph features specific to each library that are required in the analysis. The comments in [iris_funcs.py]() will show them in use but for more information on the packages or libraries see links below.
-[Pandas](https://pandas.pydata.org/) https://www.dataquest.io/blog/pandas-cheat-sheet/
-[Seaborn](https://seaborn.pydata.org/index.html) 
-[Matplotlib](https://matplotlib.org/)
+To run the code the following Packages & libraries need to be imported as there are a number of mathematical functions, dataframes, plotting & graph features specific to each library that are required in the analysis. The comments in [iris_funcs.py]() will show them in use but for more information on the packages or libraries see links below.
+* [Pandas](https://pandas.pydata.org/)
+* [Seaborn](https://seaborn.pydata.org/index.html) 
+* [Matplotlib](https://matplotlib.org/)
+* [Numpy](https://numpy.org/)
 
 ---
 ### What the code does
@@ -154,8 +158,6 @@ The two main file that will provide the outputs for the analysis are *[iris_func
 
     ax.set_ylim(len(Iriscorrel)+0.5, -0.5)>
 
-########### look at maybe centering above ############# also ad in std graph
-
 ---
 #### analysis.py
 
@@ -163,20 +165,20 @@ The two main file that will provide the outputs for the analysis are *[iris_func
 **Importing Functions and list** - The functions created above were imported and the list assigned to variable heading also imported so that both could be called for execution. (*Shown below*)
 
     import iris_functs as ifs
-    from iris_functs import heading
+    from iris_functs import heading,Data
 
 **Calling functions** - Each of the functions were then called. Some required using the list **"heading"** to be passed through as the argument. (*Shown below*)
 
 
-    #ifs.IrSums()
+    ifs.IrSums()
 
     def Emprule():
         ifs.StdEmprule("Iris-setosa")
         ifs.StdEmprule("Iris-versicolor")
         ifs.StdEmprule("Iris-virginica")
-    #Emprule()
+    Emprule()
 
-    #ifs.Sctrplt()
+    ifs.Sctrplt()
     ifs.Ir_Corrls()
 
     def Createhist():
@@ -184,11 +186,11 @@ The two main file that will provide the outputs for the analysis are *[iris_func
         ifs.IrHist(heading[1])
         ifs.IrHist(heading[2])
         ifs.IrHist(heading[3])
-    #Createhist()
+    Createhist()
 
     def CreateVioplot():
         ifs.Vioplots(heading[0:4])
-    #CreateVioplot()
+    CreateVioplot()
 
 ## 4. Analysis of Data
 ### Summary.txt
@@ -276,8 +278,8 @@ petal-length|  1.288336|  1.635664 | 1.114672 | 1.809328 |  0.941008  | 1.982992
 petal-width|   0.140614 | 0.351386 | 0.035229 | 0.456771 | -0.070157  | 0.562157
 
 Empirical rule data for Iris-versicolor
----
 
+---
 Measurement | 68% (mean-std)| 68%(mean-std)| 95%(mean-std(2))| 95%(mean-std(2))|99.7%(mean-std(3))|99.7%(mean-std(3))
 :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------:     
 sepal-length | 5.419829| 6.452171  |4.903658 | 6.968342  | 4.387487|   7.484513
@@ -286,8 +288,8 @@ petal-length  |3.790089 | 4.729911 | 3.320178 | 5.199822  | 2.850267 |  5.669733
 petal-width  | 1.128247|  1.523753 | 0.930495 | 1.721505 |  0.732742  | 1.919258
 
 Empirical rule data for Iris-versicolor
----
 
+---
 Measurement | 68% (mean-std)| 68%(mean-std)| 95%(mean-std(2))| 95%(mean-std(2))|99.7%(mean-std(3))|99.7%(mean-std(3))
 :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------:    
 sepal-length | 5.952120  |7.223880 | 5.316241 | 7.859759  | 4.680361 |  8.495639
@@ -295,12 +297,12 @@ sepal-width  | 2.651503  |3.296497 | 2.329007 | 3.618993  | 2.006510 |  3.941490
 petal-length | 5.000105  |6.103895 | 4.448211 | 6.655789  | 3.896316 |  7.207684
 petal-width  | 1.751350  |2.300650 | 1.476700 | 2.575300  | 1.202050 |  2.849950
 
-
-Minimum - Shows the minimum values of each measurement for the particular species. Again the minimum data is fairly similar for the Virginica and Versicolor while Setosa's show some differences.
-
-Percentiles - Shows the number of measurements that fall below the stated percentage. 50% is the median if this value is similar to the mean value then it shows that the data is symmetrically distributed with a low number of datapoints outside the Probable distribution function.
-
-Maximum - Shows the maximum values of each measurement for the particular species. Again the maximum data is fairly similar for the Virginica and Versicolor while Setosa's show some differences.
+#### Minimum
+Shows the minimum values of each measurement for the particular species. Again the minimum data is fairly similar for the Virginica and Versicolor while Setosa's show some differences.
+#### Percentiles
+Shows the number of measurements that fall below the stated percentage. 50% is the median if this value is similar to the mean value then it shows that the data is symmetrically distributed with a low number of datapoints outside the Probable distribution function.
+#### Maximum
+Shows the maximum values of each measurement for the particular species. Again the maximum data is fairly similar for the Virginica and Versicolor while Setosa's show some differences.
 
 ---
 ### Histograms
@@ -342,16 +344,7 @@ Below shows the histogram plots for each measurement broken out per species. *(T
 
 <div align="center">
 
----
-## Correlation of Overall Iris flower data
-Name | sepal-length| sepal-width| petal-length| petal-width
-:------------: | :-------------: | :------------: | :-------------: | :-------------:
-**sepal-length**| 1.000000 |  -0.117570  |    0.871754 |   0.817941
-**sepal-width** |-0.117570 |   1.000000  |  -0.428440  |  -0.366126
-**petal-length**| 0.871754 |  -0.428440  |   1.000000  |  0.962865
-**petal-width** | 0.817941 |  -0.366126  |   0.962865  |  1.000000
 
----
 ## Correlation of Iris Setosa flower data
 Name | sepal-length| sepal-width| petal-length| petal-width
 ------------ | ------------- | ------------ | ------------- | -------------
@@ -418,8 +411,6 @@ This project was completed using the [MIT License](https://opensource.org/licens
 26.	https://www.youtube.com/watch?v=9lMwjk8jE48 - correlations 1,1,1,1
 27.	https://www.youtube.com/watch?v=BrFEmO-zPuA
 28. https://towardsdatascience.com/understanding-the-68-95-99-7-rule-for-a-normal-distribution-b7b7cbf760c2
+29. https://numpy.org/
+30. https://medium.com/casual-inference/the-most-time-efficient-ways-to-import-csv-data-in-python-cc159b44063d - pandas importing csv
 
-
-
-https://medium.com/casual-inference/the-most-time-efficient-ways-to-import-csv-data-in-python-cc159b44063d - pandas importing csv
-https://datacarpentry.org/python-ecology-lesson/02-starting-with-data/
