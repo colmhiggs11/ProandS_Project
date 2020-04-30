@@ -250,7 +250,7 @@ Standard Deviation (Std) - Shows how much the measurements differ from the mean.
 |:--:| 
 | *[Probability Density formula* |
 
-
+#############################
 <div align="left">
 
 The Empirical rule for each species and each measurement was completed and is shown in the tables below. Although the tables have six columns of data the data is actually broken into three sections of two columns with ranges for each of the measurements taken. The first two columns show the range that 68% of the data is estimated to be in, the second two columns show the range that 95% of the data is located in and the final two columns show the range that includes 99.7% of the data. 
@@ -268,7 +268,7 @@ Empirical rule data for Iris-setosa
 ---
 
 Measurement | 68% (mean-std)| 68%(mean-std)| 95%(mean-std(2))| 95%(mean-std(2))|99.7%(mean-std(3))|99.7%(mean-std(3))
------------- | ------------- | ------------ | ------------- | -------------|------------ |------------                     
+:------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------:                     
 sepal-length|  4.653510 | 5.358490 | 4.301021 | 5.710979|   3.948531 |  6.063469
 sepal-width|   3.048936 | 3.807064|  2.669871 | 4.186129 |  2.290807 |  4.565193
 petal-length|  1.288336|  1.635664 | 1.114672 | 1.809328 |  0.941008  | 1.982992
@@ -278,7 +278,7 @@ Empirical rule data for Iris-versicolor
 ---
 
 Measurement | 68% (mean-std)| 68%(mean-std)| 95%(mean-std(2))| 95%(mean-std(2))|99.7%(mean-std(3))|99.7%(mean-std(3))
------------- | ------------- | ------------ | ------------- | -------------|------------ |------------   
+:------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------:     
 sepal-length | 5.419829| 6.452171  |4.903658 | 6.968342  | 4.387487|   7.484513
 sepal-width   |2.456202 | 3.083798 | 2.142403 | 3.397597  | 1.828605|   3.711395
 petal-length  |3.790089 | 4.729911 | 3.320178 | 5.199822  | 2.850267 |  5.669733
@@ -288,7 +288,7 @@ Empirical rule data for Iris-versicolor
 ---
 
 Measurement | 68% (mean-std)| 68%(mean-std)| 95%(mean-std(2))| 95%(mean-std(2))|99.7%(mean-std(3))|99.7%(mean-std(3))
------------- | ------------- | ------------ | ------------- | -------------|------------ |------------   
+:------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------:    
 sepal-length | 5.952120  |7.223880 | 5.316241 | 7.859759  | 4.680361 |  8.495639
 sepal-width  | 2.651503  |3.296497 | 2.329007 | 3.618993  | 2.006510 |  3.941490
 petal-length | 5.000105  |6.103895 | 4.448211 | 6.655789  | 3.896316 |  7.207684
@@ -377,26 +377,14 @@ Name | sepal-length| sepal-width| petal-length| petal-width
 **petal-length**| 0.864225 |   0.401045  |   1.000000  |  0.322108
 **petal-width** | 0.281108 |  0.537728  |   0.322108  |  1.000000
 
----
-## Summary of Iris Flower Dataset
-Name | sepal-length| sepal-width| petal-length| petal-width
------------- | ------------- | ------------ | ------------- | -------------
-**count**  |  150.000000  | 150.000000  |  150.000000 |  150.000000
-**mean**   |    5.843333  |   3.057333  |    3.758000 |    1.199333
-**std**    |    0.828066  |   0.435866  |    1.765298 |    0.762238
-**min**    |    4.300000  |   2.000000  |    1.000000 |    0.100000
-**25%**    |    5.100000  |   2.800000  |    1.600000 |    0.300000
-**50%**    |    5.800000  |   3.000000  |    4.350000 |    1.300000
-**75%**    |    6.400000  |   3.300000  |    5.100000 |    1.800000
-**max**    |    7.900000  |   4.400000  |    6.900000 |    2.500000
 
 ########check if this is relevant#########
 
 <div align="left">
 
 ## 5. Summary / Conclusions
-	Verginicas and versicoulours are difficult to separate
-	Attributes that single out particular flower type.
+Verginicas and versicoulours are difficult to separate
+Attributes that single out particular flower type.
 
 ## 6. Licence
 This project was completed using the [MIT License](https://opensource.org/licenses/MIT). Due to the limited restrictions it puts on reuse, it has a high license compatibility.
