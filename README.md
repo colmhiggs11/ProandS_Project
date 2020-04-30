@@ -45,7 +45,7 @@ Check if there is any other files that need to be mentioned.##########
     * [README Layout](#readme-layout)
 * [2. Background R Fisher & Iris Data](#2-background-r-fisher--iris-data)
 * [3. Code](#3-code)
-* [4. Summary / Outcomes](#4-summary-outcomes)
+* [4. Analysis of Data](#41-analysis-of-data)
 * [5. License](#5-License)
 * [6. References](#6-references)
 
@@ -145,6 +145,9 @@ The two main file that will provide the outputs for the analysis are *[iris_func
 **IrSums():** - This function opens and writes to a text file called summary.txt with a summary of the following for each of the three species types. Mean, Standard deviation, minimum value, 25% percentile, 50% percentile, 75% percentile & maximum values. There is also a statement that will output whether there is any data missing from the dataset.
 ######################### put in links   #########################
 
+
+**StdEmprule():** - This function takes the standard deviation and mean and calculates the probability density funciton using the [Empirical rule](#-summarytxt). An array is created using Numpy so the calculations can be completed and the data then forms a Dataframe for display.
+
  **IrHist(Mestyp1):** - This function creates the histograms for each of the four independent variables with data on each histogram shown by species type (assigned as heading[4]). To do this [seaborns FacetGrid](https://seaborn.pydata.org/generated/seaborn.FacetGrid.html) object is initailised and the dataset is mapped onto the single plot. A distribution plot was used with the kde (kernel density estimate) turned off as this calculates the probable density and skews the y-axis values. The rest of the function is just formatting and saving the plots as .png files to the repository. The number of bins used was 25. As there are 50 measurements per species this allows the data to be easily visualised from the histograms. The argument required will be the measurement type otherwise known as one of the four independent variables.
 
 **Sctrplt():** - The scatterplot was created using [seaborns pairplot](https://seaborn.pydata.org/generated/seaborn.pairplot.html). This plots pairwise variables in the dataset again by species type in a grid of plots. This was then saved to the repository as a .png file.
@@ -167,9 +170,17 @@ The two main file that will provide the outputs for the analysis are *[iris_func
     from iris_functs import heading
 
 **Calling functions** - Each of the functions were then called. Some required using the list **"heading"** to be passed through as the argument. (*Shown below*)
-###########add in std fnc###################
-    ifs.IrSums()
-    ifs.Sctrplt()
+
+
+    #ifs.IrSums()
+
+    def Emprule():
+        ifs.StdEmprule("Iris-setosa")
+        ifs.StdEmprule("Iris-versicolor")
+        ifs.StdEmprule("Iris-virginica")
+    #Emprule()
+
+    #ifs.Sctrplt()
     ifs.Ir_Corrls()
 
     def Createhist():
@@ -177,11 +188,11 @@ The two main file that will provide the outputs for the analysis are *[iris_func
         ifs.IrHist(heading[1])
         ifs.IrHist(heading[2])
         ifs.IrHist(heading[3])
-    Createhist()        
+    #Createhist()
 
     def CreateVioplot():
         ifs.Vioplots(heading[0:4])
-    CreateVioplot()
+    #CreateVioplot()
 
 ## 4. Analysis of Data
 ### Summary.txt
@@ -225,7 +236,8 @@ The summary table below shows the output that can be found in the [summary.txt](
 
 <div align="left">
 
-Count - All values clearly show that measuremts were taken on 50 flowers in each of the three species.
+#### Count
+All values clearly show that measuremts were taken on 50 flowers in each of the three species.
 
 Mean - Shows the average measurements taken for each of the flower types. 
 
@@ -255,8 +267,8 @@ Standard Deviation (Std) - Shows how much the measurements differ from the mean.
 
 The Empirical rule for each species and each measurement was completed and is shown in the tables below. Although the tables have six columns of data the data is actually broken into three sections of two columns with ranges for each of the measurements taken. The first two columns show the range that 68% of the data is estimated to be in, the second two columns show the range that 95% of the data is located in and the final two columns show the range that includes 99.7% of the data. 
 
-|Name | Comment|
-|:--|:--|
+Name | Comment
+:--------------|:--
 |Sepal-length:|In terms of sepal length 99.7% of the data for each of the flowers fall into the following ranges: **Setosa: 3.9 - 6.06cm**, **Versicolor: 4.38 - 7.48cm** and **Virginica: 4.6 - 8.49cm**|
 |Sepal-width:|In terms of sepal width 99.7% of the data for each of the flowers fall into the following ranges: **Setosa: 2.29 - 4.56cm**, **Versicolor: 1.82 - 3.71cm** and **Virginica: 2.0 - 3.94cm**|
 |Petal-length:|In terms of Petal-length 99.7% of the data for each of the flowers fall into the following ranges: **Setosa: 0.94 - 1.98cm**, **Versicolor: 2.85 - 5.6cm** and **Virginica: 3.89 - 7.20cm**|
@@ -264,9 +276,9 @@ The Empirical rule for each species and each measurement was completed and is sh
 
 
 
-Empirical rule data for Iris-setosa 
----
+Empirical rule data for Iris-setosa
 
+---
 Measurement | 68% (mean-std)| 68%(mean-std)| 95%(mean-std(2))| 95%(mean-std(2))|99.7%(mean-std(3))|99.7%(mean-std(3))
 :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------:                     
 sepal-length|  4.653510 | 5.358490 | 4.301021 | 5.710979|   3.948531 |  6.063469
