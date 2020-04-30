@@ -24,7 +24,7 @@ This repository contains the files for the project in the Programming and Script
 * [Plots](https://github.com/colmhiggs11/ProandS_Project/tree/master/Plots) *(Folder containing below outputs)* 
     * [Histogram Plots](https://github.com/colmhiggs11/ProandS_Project/tree/master/Plots/Histogram%20PNG's) *(PNG files required for project)*
     * [Scatter Plot](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Scatterplot%20of%20variables.png?raw=true) *(PNG files required for project)*
-    * [Violin Plot]()
+    * [Violin Plot]() ####add link here
     * [Correlation Heatmap](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Correlation%20Heatmap.png?raw=true)
 
 * **Other items**
@@ -33,9 +33,6 @@ This repository contains the files for the project in the Programming and Script
     * [License](https://github.com/colmhiggs11/ProandS_Project/blob/master/LICENSE) *(MIT License)*
     * .gitignore
 
-##########
-Add links for each of plots
-Check if there is any other files that need to be mentioned.##########
 
 ## Table of Contents
 * [1. Introduction](#1-introduction)
@@ -79,9 +76,6 @@ Fisher had a keen interest in [Eugenics](https://www.google.com/search?q=Eugenic
 | *Fishers Iris Dataset -“The use of multiple measurements in taxonomic problems” (Fisher, 1936)* |
 
 <div align="left">
-Fischer Paper:
-
-    https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x  -THE USE OF MULTIPLE MEASUREMENTS IN TAXONOMIC  PROBLEMS
 
 ---
 ### Data Analysis
@@ -103,11 +97,9 @@ The Iris Dataset or “Fishers Iris Dataset” is one of the most recognisable d
 
 The dataset used in this analysis was obtained from [UCI archive](https://archive.ics.uci.edu/ml/datasets/iris). There were two errors which required updating the .csv file.
     
-    This data differs from the data presented in Fishers article
-    (identified by Steve Chadwick, spchadwick '@' espeedaz.net ).
-    The 35th sample should be: 4.9,3.1,1.5,0.2,"Iris-setosa" where
-    the error is in the fourth feature. The 38th sample: 4.9,3.6,1.4,0.1,
-    "Iris-setosa" where the errors are in the second and third features.
+    This data differs from the data presented in Fishers article (identified by Steve Chadwick, spchadwick '@' espeedaz.net ).
+    The 35th sample should be: 4.9,3.1,1.5,0.2,"Iris-setosa" where the error is in the fourth feature. The 38th sample:
+    4.9,3.6,1.4,0.1,"Iris-setosa" where the errors are in the second and third features.
 
 
 ## 3. Code for analysis
@@ -115,9 +107,8 @@ The dataset used in this analysis was obtained from [UCI archive](https://archiv
 ### How it was written
 The analysis of the Iris dataset will be completed using [Python](https://en.wikipedia.org/wiki/Python_(programming_language)).
 
-The version of python installed on my PC at time of completion of this project is: Python 3.7.4 (default, Aug  9 2019, 18:34:13) [MSC v.1915 64 bit (AMD64)] :: Anaconda, Inc. on win32
+The version of python installed on my PC at time of completion of this project is: Python 3.7.4 [MSC v.1915 64 bit (AMD64)] :: Anaconda, Inc. on win32
  
-
 ---
 ### How to run
 To complete the analysis you will first need to download the repository from Github, download and install python with anaconda, read the below on what each function/program does and then run. 
@@ -132,15 +123,20 @@ To run the code the following Packages & libraries need to be imported as there 
 
 ---
 ### What the code does
-The two main file that will provide the outputs for the analysis are *[iris_functs.py]()* and *[2.analysis.py](https://github.com/colmhiggs11/ProandS_Project/blob/master/2.analysis.py)*.
+The two main file that will provide the outputs for the analysis are *[iris_functs.py](https://github.com/colmhiggs11/ProandS_Project/blob/master/iris_functs.py)* and *[2.analysis.py](https://github.com/colmhiggs11/ProandS_Project/blob/master/2.analysis.py)*.
 
 **iris_functs.py** -  is made up of functions and script that imports the codes and creates the environment for the analysis to take place. Pandas is used to create the dataframe and import the dataset as Iris.csv. Once the headings are assigned to the rows and variable Data assigned the dataset contents, the five functions are created. 
 
 **2.analysis.py.** - calls the functions from iris_functs.py and executes script.
 (*Explantions below*)
 
+
+<div align="center">
+
 ---
 #### iris_functs.py
+
+<div align="left">
 
 ---
 **IrSums():** - This function opens and writes to a text file called summary.txt with a summary of the following for each of the three species types. Mean, Standard deviation, minimum value, 25% percentile, 50% percentile, 75% percentile & maximum values. There is also a statement that will output whether there is any data missing from the dataset.
@@ -159,8 +155,11 @@ The two main file that will provide the outputs for the analysis are *[iris_func
 
     ax.set_ylim(len(Iriscorrel)+0.5, -0.5)>
 
+<div align="center">
+
 ---
 #### 2.analysis.py
+<div align="left">
 
 ---
 **Importing Functions and list** - The functions created above were imported and the list assigned to variable heading also imported so that both could be called for execution. (*Shown below*)
@@ -235,8 +234,11 @@ The summary table below shows the output that can be found in the [summary.txt](
 
 <div align="left">
 
+---
 #### Count
 All values clearly show that measuremts were taken on 50 flowers in each of the three species.
+
+---
 #### Mean
 Shows the average measurements taken for each of the flower types. 
 |Name | Comment|
@@ -246,6 +248,7 @@ Shows the average measurements taken for each of the flower types.
 |Petal-length:|The average petal length across the three flowers shows some interesting results. Whilst Virginica and Versicolor don't differ greatly *(range of 4.26-5.55cm)* the Setosa flower shows some significant uniques qualities. It's average petal length is much smaller at 1.46 cm|
 |Petal-width:|Whilst the average measurements for petal width are smaller than the petal length, they do show similar traits to petal width where Virginica and Versicolor don't differ greatly and the Setosa flower average is much lower.|
 
+---
 #### Standard Deviation (Std)
 Shows how much the measurements differ from the mean. Typically if the (std) is low then the data would be seen to be clustered relatively closely around the mean. A high Std suggests that the data is more dispersed and would have a larger range. It also allows for the calculation of the Probability density function the formula shown below. Using the [Empirical or 68,95,99.7 Rule](https://towardsdatascience.com/understanding-the-68-95-99-7-rule-for-a-normal-distribution-b7b7cbf760c2) the percentage of values that fall within one and three standard deviations of the mean can be calculated. See graph below.
 
@@ -298,10 +301,16 @@ sepal-width  | 2.651503  |3.296497 | 2.329007 | 3.618993  | 2.006510 |  3.941490
 petal-length | 5.000105  |6.103895 | 4.448211 | 6.655789  | 3.896316 |  7.207684
 petal-width  | 1.751350  |2.300650 | 1.476700 | 2.575300  | 1.202050 |  2.849950
 
+---
 #### Minimum
 Shows the minimum values of each measurement for the particular species. Again the minimum data is fairly similar for the Virginica and Versicolor while Setosa's show some differences.
+
+---
 #### Percentiles
 Shows the number of measurements that fall below the stated percentage. 50% is the median if this value is similar to the mean value then it shows that the data is symmetrically distributed with a low number of datapoints outside the Probable distribution function.
+
+---
+---
 #### Maximum
 Shows the maximum values of each measurement for the particular species. Again the maximum data is fairly similar for the Virginica and Versicolor while Setosa's show some differences.
 
