@@ -303,22 +303,21 @@ Maximum - Shows the maximum values of each measurement for the particular specie
 
 ---
 ### Histograms
+Below shows the histogram plots for each measurement broken out per species. *(To enlarge the graph just click on them.)* The histograms show that for Petal length & width Setosa's are easily distinguishable whereas Virginica and Versicolor are slightly more difficult to differentiate. Also the Sepal measurements don't make it easy to classify the Iris flower type.
 
-|![hist](https://github.com/colmhiggs11/ProandS_Project/blob/master/petal-length.png?raw=true)|![hist](https://github.com/colmhiggs11/ProandS_Project/blob/master/petal-length.png?raw=true)|
+
+|![hist](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Histogram%20PNG's/sepal-length.png?raw=true)|![hist](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Histogram%20PNG's/sepal-width.png?raw=true)|
 |:--:|:--:|
-| *Iris flowers by species & measurements included in Fishers Dataset* |*Iris flowers by species & measurements included in Fishers Dataset*|
+| *Sepal Length per Species* |*Sepal Width per Species*|
 
-|![hist](https://github.com/colmhiggs11/ProandS_Project/blob/master/petal-length.png?raw=true)|![hist](https://github.com/colmhiggs11/ProandS_Project/blob/master/petal-length.png?raw=true)|
+|![hist](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Histogram%20PNG's/petal-length.png?raw=true)|![hist](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Histogram%20PNG's/petal-width.png?raw=true)|
 |:--:|:--:|
-| *Iris flowers by species & measurements included in Fishers Dataset* |*Iris flowers by species & measurements included in Fishers Dataset*|
-
-
-###########Update links and captions for histograms############
+| *Petal Length per Species* |*Petal Width per Species*|
 
 ---
 ### Scatterplots
 
-|![]()
+|![Pairplot](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Scatterplot%20of%20variables.png?raw=true)
 |:--:|
 | *Iris flowers by species & measurements included in Fishers Dataset* |
 
@@ -336,10 +335,9 @@ Maximum - Shows the maximum values of each measurement for the particular specie
 ---
 ### Correlations
 
-|![]()
+|![Heatmap](https://github.com/colmhiggs11/ProandS_Project/blob/master/Plots/Correlation%20Heatmap.png?raw=true)
 |:--:|
 | *Iris flowers by species & measurements included in Fishers Dataset* |
-######Update the link for the scatterplot##########
 
 <div align="center">
 
