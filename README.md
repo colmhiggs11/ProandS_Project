@@ -16,7 +16,7 @@
 <div align="left">
 
 ## Information
-This repository contains the files for the project in the Programming and Scripting module 2020. Key files in this repository include the following files which will be explained in more detail below.*(For quick acces to the files just click on them below)*
+This repository contains the files for the project in the Programming and Scripting module 2020. Key files in this repository include the following files which will be explained in more detail below. *(For quick access to the files just click on them below)*
 
 * [README.md](https://github.com/colmhiggs11/ProandS_Project/blob/master/README.md) *(Description and Analysis of the project)*
 * [IRIS.csv](https://github.com/colmhiggs11/ProandS_Project/blob/master/IRIS.csv) *(Data File)*
@@ -49,7 +49,7 @@ Check if there is any other files that need to be mentioned.##########
 * [6. References](#6-references)
 
 ## 1.  Introduction
-This project is an analysis of the well known Iris dataset for the Intoduction to Programming and Scripting module as part fulfilment of the Higher Diploma in Science in Computing (Data Analytics). The project focuses on the widely known Fischer Iris. It requires research and analysis of the dataset and presentation of the findings. The main objective of this analysis is to try and classify the three species of Iris flower by using the four measurements of Sepal width, Sepal length, Petal width and Petal length. The analysis should show if this is possible and will be done in the steps laid out in the README. 
+This project is an analysis of the well known Iris dataset for the Introduction to Programming and Scripting module as part fulfilment of the Higher Diploma in Science in Computing (Data Analytics). The project focuses on the widely known Fischer Iris. It requires research and analysis of the dataset and presentation of the findings. The main objective of this analysis is to try and classify the three species of Iris flower by using the four measurements of Sepal width, Sepal length, Petal width and Petal length. The analysis should show if this is possible and will be done in the steps laid out in the README. 
 
 ---
 ### README Layout
@@ -70,7 +70,7 @@ This project is an analysis of the well known Iris dataset for the Intoduction t
 
 ## 2. Background R Fisher & Iris Data
 ### Ronald Fisher 
-Sir Ronald Fisher (1890-1962) was a British statistician and geneticist, also hailed as the greatest biologist since Charles Darwin he was one of the principal founders of population genetics.. 
+Sir Ronald Fisher (1890-1962) was a British statistician and geneticist, also hailed as the greatest biologist since Charles Darwin he was one of the principal founders of population genetics. 
 Fisher had a keen interest in [Eugenics](https://www.google.com/search?q=Eugenics&oq=Eugenics&aqs=chrome..69i57j69i61l3&sourceid=chrome&ie=UTF-8). He felt that “socially strong” people should be encouraged to have more children rather that those who were classified as “socially weak” Fishers interest in Eugenics paved the way for his work in the genetics of a population.  He investigated the link between genes for different traits and developed methods of multivariate analysis to complete the analysis. One of the most famous datasets used in Data Science is Fishers Iris Dataset. This dataset comes from his work in discriminant analysis and can be found in “The use of multiple measurements in taxonomic problems” (Fisher, 1936).
 
 <div align="center">
@@ -103,7 +103,7 @@ The Iris Dataset or “Fishers Iris Dataset” is one of the most recognisable d
 
 https://en.wikipedia.org/wiki/Iris_flower_data_set
 
-https://archive.ics.uci.edu/ml/datasets/iris  - Explain how had to change the data points
+https://archive.ics.uci.edu/ml/datasets/iris  - Explain how had to change the data points.
 This data differs from the data presented in Fishers article (identified by Steve Chadwick, spchadwick '@' espeedaz.net ). The 35th sample should be: 4.9,3.1,1.5,0.2,"Iris-setosa" where the error is in the fourth feature. The 38th sample: 4.9,3.6,1.4,0.1,"Iris-setosa" where the errors are in the second and third features.
 
 
@@ -113,13 +113,13 @@ This data differs from the data presented in Fishers article (identified by Stev
 ### How it was written
 The analysis of the Iris dataset will be completed using [Python](https://en.wikipedia.org/wiki/Python_(programming_language)).
 
-The version of python installed on my PC at time of completion of this project is :Python 3.7.4 (default, Aug  9 2019, 18:34:13) [MSC v.1915 64 bit (AMD64)] :: Anaconda, Inc. on win32
+The version of python installed on my PC at time of completion of this project is: Python 3.7.4 (default, Aug  9 2019, 18:34:13) [MSC v.1915 64 bit (AMD64)] :: Anaconda, Inc. on win32
 http://anh.cs.luc.edu/handsonPythonTutorial/ch1.html
 https://wiki.python.org/moin/BeginnersGuide/Programmers 
 
 ---
 ### How to run
-To complete the analysis you will first need to download the repository from Github, download and install pyton with anaconda, read the below on what each function/program does and then run. 
+To complete the analysis you will first need to download the repository from Github, download and install python with anaconda, read the below on what each function/program does and then run. 
 
 ---
 ### Python Packages & libraries
@@ -129,28 +129,28 @@ To run the code the following Packages & libraries need to be imported as there 
 [Matplotlib](https://matplotlib.org/)
 
 ---
-### What code does
+### What the code does
 The two main file that will provide the outputs for the analysis are *[iris_funcs.py]()* and *[2. analysis.py](https://github.com/colmhiggs11/ProandS_Project/blob/master/1.%20analysis.py)*.
 
 **iris_funcs.py** -  is made up of functions and script that imports the codes and creates the environment for the analysis to take place. Pandas is used to create the dataframe and import the dataset as Iris.csv. Once the headings are assigned to the rows and variable Data assigned the dataset contents, the five functions are created. 
 
 **2. analysis.py.** - calls the functions from iris_funcs.py and executes script.
-(*Explanantions below.*)
+(*Explantions below*)
 
 ---
 #### iris_func.py
 
 ---
-**IrSums():** - This function opens and writes to a text file called summary.txt with a summary of the following for each of the three species types. Mean, Standard deviation, minimum value, 25% percentile,50% percentile, 75% percentile & maximum values. There is also a statement that will output whether there is any data missing from the dataset.
+**IrSums():** - This function opens and writes to a text file called summary.txt with a summary of the following for each of the three species types. Mean, Standard deviation, minimum value, 25% percentile, 50% percentile, 75% percentile & maximum values. There is also a statement that will output whether there is any data missing from the dataset.
 ######################### put in links   #########################
 
- **IrHist(Mestyp1):** - This function creates the histograms for each of the four independant variables with data on each histogram shown by species type (assigned as heading[4]). To do this [seaborns FacetGrid](https://seaborn.pydata.org/generated/seaborn.FacetGrid.html) object is initalised and the dataset is mapped onto the single plot. A distribution plot was used with the kde(kernel density estimate) turned off as this calculates the probable density and skews the y-axis values. The rest of the function is just formatting and saving the plots as .png files to the repository. The number of bins used was 25. As there are 50 measurements per species this allows the data to be easily visualised from the histograms. The arguement required will be the measurement type otherwise known as one of the four independent variables.
+ **IrHist(Mestyp1):** - This function creates the histograms for each of the four independent variables with data on each histogram shown by species type (assigned as heading[4]). To do this [seaborns FacetGrid](https://seaborn.pydata.org/generated/seaborn.FacetGrid.html) object is initailised and the dataset is mapped onto the single plot. A distribution plot was used with the kde (kernel density estimate) turned off as this calculates the probable density and skews the y-axis values. The rest of the function is just formatting and saving the plots as .png files to the repository. The number of bins used was 25. As there are 50 measurements per species this allows the data to be easily visualised from the histograms. The argument required will be the measurement type otherwise known as one of the four independent variables.
 
 **Sctrplt():** - The scatterplot was created using [seaborns pairplot](https://seaborn.pydata.org/generated/seaborn.pairplot.html). This plots pairwise variables in the dataset again by species type in a grid of plots. This was then saved to the repository as a .png file.
 
-**Vioplots(Mestyp2):** - This function creates four violinplots as subplots using [seaborns violinplot](https://seaborn.pydata.org/generated/seaborn.violinplot.html). Using plt.subplot from [Matplotlib](https://matplotlib.org/3.2.1/api/_as_gen/matplotlib.pyplot.subplot.html) each plot can be assigned a position in the four figure plot. The arguement required will be the measurement type otherwise known as one of the four independent variables. 
+**Vioplots(Mestyp2):** - This function creates four violinplots as subplots using [seaborns violinplot](https://seaborn.pydata.org/generated/seaborn.violinplot.html). Using plt.subplot from [Matplotlib](https://matplotlib.org/3.2.1/api/_as_gen/matplotlib.pyplot.subplot.html) each plot can be assigned a position in the four figure plot. The argument required will be the measurement type otherwise known as one of the four independent variables. 
 
-**Ir_Corrls():** - This function creates a heatmap correlation table. [Seaborns heatmap](https://seaborn.pydata.org/generated/seaborn.heatmap.html) function creates the color encoded matrix once the correct data file is added. This particular heatmap shows correlation for overall file not by species type. The rest of the script is formatting. There was an issue with the heatmap function in Python 3.7.4 that cut out half of the top and bottom sections of the heatmap. To get around this below was used to [extend the y-axis](https://github.com/matplotlib/matplotlib/issues/14751) 
+**Ir_Corrls():** - This function creates a heatmap correlation table. [Seaborns heatmap](https://seaborn.pydata.org/generated/seaborn.heatmap.html) function creates the colour encoded matrix once the correct data file is added. This particular heatmap shows correlation for overall file not by species type. The rest of the script is formatting. There was an issue with the heatmap function in Python 3.7.4 that cut out half of the top and bottom sections of the heatmap. To get around this below was used to [extend the y-axis](https://github.com/matplotlib/matplotlib/issues/14751) 
 
     ax.set_ylim(len(Iriscorrel)+0.5, -0.5)>
 
@@ -165,7 +165,7 @@ The two main file that will provide the outputs for the analysis are *[iris_func
     import iris_funcs as ifs
     from iris_funcs import heading
 
-**Calling functions** - Each of the functions were then called. Some required using the list **"heading"** to be passed through as the arguement. (*Shown below*)
+**Calling functions** - Each of the functions were then called. Some required using the list **"heading"** to be passed through as the argument. (*Shown below*)
 
     ifs.IrSums()
     ifs.Sctrplt()
@@ -184,27 +184,7 @@ The two main file that will provide the outputs for the analysis are *[iris_func
 
 ## 4. Analysis of Data
 ### Summary.txt
-The summary table below shows the output of the describe() function that was executed on each species type of Iris flower.
-Minimum - Petal length & Petal width 
-mean
-std - low , data is closely clustered around the mean.
-    high, data is widely dispersed over a wider range of values.
-
-68-95-99.7 rule 
-68 fall in 1 std of mean
-plus or - the std
-
-########### Put in graph here and analyse ###########
-
-min
-
-percentiles
-50% is the median
-
-    For all the species, the respective values of the mean and median of it’s features are found to be pretty close. This indicates that data is nearly symmetrically distributed with very less presence of outliers. Box plot(explained later) is one of the best statistical tool used for outlier detection in the data.
-
-
-max
+The summary table below shows the output that can be found in the [summary.txt](https://github.com/colmhiggs11/ProandS_Project/blob/master/summary.txt) file using the describe() function that was executed on per species type of Iris flower. The values for each summary metric are discussed below the table.
 
 <div align="center">
 
@@ -242,6 +222,47 @@ max
     max         7.90000     3.800000      6.900000      2.50000
 
 <div align="left">
+
+Count - All values clearly show that measuremts were taken on 50 flowers in each of the three species.
+
+Mean - Shows the average measurements taken for each of the flower types. 
+
+|Name | sepal-length|
+|:--|:--|
+|Sepal-length:|This is the measurement with the least variation across all of the Iris flowers ranging from 5-6.58 cm for with Setosa being the smallest and Virginica the largest.|
+|Sepal-width:|This meaasurement is shows very little variation between Virginica and Versicolor and also is the only average measurement where the Setosa flower is larger than the other two|
+|Petal-length:|The average petal length across the three flowers shows some interesting results. Whilst Virginica and Versicolor don't differ greatly *(range of 4.26-5.55cm)* the Setosa flower shows some significant uniques qualities. It's average petal length is much smaller at 1.46 cm|
+|Petal-width:|Whilst the average measurements for petal width are smaller than the petal length, they do show similar traits to petal width where Virginica and Versicolor don't differ greatly and the Setosa flower average is much lower.|
+
+
+Standard Deviation (Std) - Shows how much the measurements differ from the mean. Typically if the (std) is low then the data would be seen to be clustered relatively closely around the mean. A high Std suggests that the data is more dispersed and would have a larger range. It also allows for the calculation of the normal distribution. Using the [Empirical or 68,95,99.7 Rule](https://towardsdatascience.com/understanding-the-68-95-99-7-rule-for-a-normal-distribution-b7b7cbf760c2) the percentage of values that fall within one and three standard deviations of the mean can be calculated. See graph below.
+
+<div align="center">
+
+|![Standard deviation table](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Standard%20Deviation.png?raw=true)|
+|:--:| 
+| *Empirical rule distribution* |
+
+
+
+
+
+
+
+
+<div align="left">
+
+Minimum - Petal length & Petal width 
+
+percentiles
+50% is the median
+
+    For all the species, the respective values of the mean and median of it’s features are found to be pretty close. This indicates that data is nearly symmetrically distributed with very less presence of outliers. Box plot(explained later) is one of the best statistical tool used for outlier detection in the data.
+
+
+max
+
+
 
 ---
 ### Histograms
@@ -339,42 +360,80 @@ Name | sepal-length| sepal-width| petal-length| petal-width
 
 <div align="left">
 
-## 5. Summary / Outcomes
+## 5. Summary / Conclusions
 	Verginicas and versicoulours are difficult to separate
 	Attributes that single out particular flower type.
 
 ## 6. Licence
-This project was completed using the [MIT License](https://opensource.org/licenses/MIT). Due to the limited restrictions it puts on reuse, it has a high license compatability.
+This project was completed using the [MIT License](https://opensource.org/licenses/MIT). Due to the limited restrictions it puts on reuse, it has a high license compatibility.
 ## 7. References
-https://www.google.com/search?q=Eugenics&oq=Eugenics&aqs=chrome..69i57j69i61l3&sourceid=chrome&ie=UTF-8 
-https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Fischer%20Data%20Table.PNG?raw=true
-https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
-https://www.geeksforgeeks.org/univariate-bivariate-and-multivariate-data-and-its-analysis/
-https://www.statisticshowto.com/bivariate-analysis/
-https://en.wikipedia.org/wiki/Iris_flower_data_set
-https://archive.ics.uci.edu/ml/datasets/iris
-https://en.wikipedia.org/wiki/Python_(programming_language)
-http://anh.cs.luc.edu/handsonPythonTutorial/ch1.html
-https://wiki.python.org/moin/BeginnersGuide/Programmers 
-https://pandas.pydata.org/
-https://www.dataquest.io/blog/pandas-cheat-sheet/
-https://seaborn.pydata.org/index.html
-https://matplotlib.org/
-https://realpython.com/python-matplotlib-guide/
-https://seaborn.pydata.org/generated/seaborn.FacetGrid.html
-https://seaborn.pydata.org/generated/seaborn.distplot.html
-https://www.datacamp.com/community/tutorials/histograms-matplotlib
-https://seaborn.pydata.org/generated/seaborn.pairplot.html
-https://seaborn.pydata.org/generated/seaborn.violinplot.html
-https://matplotlib.org/3.2.1/api/_as_gen/matplotlib.pyplot.subplot.html
-https://seaborn.pydata.org/generated/seaborn.heatmap.html
-https://github.com/matplotlib/matplotlib/issues/14751 
-https://opensource.org/licenses/MIT
-https://stackoverflow.com/questions/24319505/how-can-one-display-images-side-by-side-in-a-github-readme-md
-https://www.youtube.com/watch?v=9lMwjk8jE48 - correlations 1,1,1,1
-https://www.youtube.com/watch?v=BrFEmO-zPuA
+1.	https://www.google.com/search?q=Eugenics&oq=Eugenics&aqs=chrome..69i57j69i61l3&sourceid=chrome&ie=UTF-8 
+2.	https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Fischer%20Data%20Table.PNG?raw=true
+3.	https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
+4.	https://www.geeksforgeeks.org/univariate-bivariate-and-multivariate-data-and-its-analysis/
+5.	https://www.statisticshowto.com/bivariate-analysis/
+6.	https://en.wikipedia.org/wiki/Iris_flower_data_set
+7.	https://archive.ics.uci.edu/ml/datasets/iris
+8.	https://en.wikipedia.org/wiki/Python_(programming_language)
+9.	http://anh.cs.luc.edu/handsonPythonTutorial/ch1.html
+10.	https://wiki.python.org/moin/BeginnersGuide/Programmers 
+11.	https://pandas.pydata.org/
+12.	https://www.dataquest.io/blog/pandas-cheat-sheet/
+13.	https://seaborn.pydata.org/index.html
+14.	https://matplotlib.org/
+15.	https://realpython.com/python-matplotlib-guide/
+16.	https://seaborn.pydata.org/generated/seaborn.FacetGrid.html
+17.	https://seaborn.pydata.org/generated/seaborn.distplot.html
+18.	https://www.datacamp.com/community/tutorials/histograms-matplotlib
+19.	https://seaborn.pydata.org/generated/seaborn.pairplot.html
+20.	https://seaborn.pydata.org/generated/seaborn.violinplot.html
+21.	https://matplotlib.org/3.2.1/api/_as_gen/matplotlib.pyplot.subplot.html
+22.	https://seaborn.pydata.org/generated/seaborn.heatmap.html
+23.	https://github.com/matplotlib/matplotlib/issues/14751 
+24.	https://opensource.org/licenses/MIT
+25.	https://stackoverflow.com/questions/24319505/how-can-one-display-images-side-by-side-in-a-github-readme-md
+26.	https://www.youtube.com/watch?v=9lMwjk8jE48 - correlations 1,1,1,1
+27.	https://www.youtube.com/watch?v=BrFEmO-zPuA
+28. https://towardsdatascience.com/understanding-the-68-95-99-7-rule-for-a-normal-distribution-b7b7cbf760c2
 
 
 
 https://medium.com/casual-inference/the-most-time-efficient-ways-to-import-csv-data-in-python-cc159b44063d - pandas importing csv
 https://datacarpentry.org/python-ecology-lesson/02-starting-with-data/
+
+<div align="center">
+
+
+|llllllllllllllll|
+|:--:|
+|Empirical rule data for Iris-setosa |
+
+Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std|
+|------------ | ------------- | ------------ | ------------- | -------------|------------ |------------ |------------ |                          
+|sepal-length|  4.653510 | 5.358490 | 4.301021 | 5.710979|   3.948531 |  6.063469|
+|sepal-width|   3.048936 | 3.807064|  2.669871 | 4.186129 |  2.290807 |  4.565193|
+|petal-length|  1.288336|  1.635664 | 1.114672 | 1.809328 |  0.941008  | 1.982992|
+|petal-width|   0.140614 | 0.351386 | 0.035229 | 0.456771 | -0.070157  | 0.562157|
+
+|llllllllllllllll|
+|:--:|
+|Empirical rule data for Iris-versicolor |
+
+Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std|
+|------------ | ------------- | ------------ | ------------- | -------------|------------ |------------ |------------ |     
+|sepal-length | 5.419829| 6.452171  |4.903658 | 6.968342  | 4.387487|   7.484513|
+|sepal-width   |2.456202 | 3.083798 | 2.142403 | 3.397597  | 1.828605|   3.711395|
+|petal-length  |3.790089 | 4.729911 | 3.320178 | 5.199822  | 2.850267 |  5.669733|
+|petal-width  | 1.128247|  1.523753 | 0.930495 | 1.721505 |  0.732742  | 1.919258|
+
+
+|llllllllllllllll|
+|:--:|
+|Empirical rule data for Iris-versicolor |
+
+Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std|
+|------------ | ------------- | ------------ | ------------- | -------------|------------ |------------ |------------ |     
+|sepal-length | 5.952120  |7.223880 | 5.316241 | 7.859759  | 4.680361 |  8.495639|
+|sepal-width  | 2.651503  |3.296497 | 2.329007 | 3.618993  | 2.006510 |  3.941490|
+|petal-length | 5.000105  |6.103895 | 4.448211 | 6.655789  | 3.896316 |  7.207684|
+|petal-width  | 1.751350  |2.300650 | 1.476700 | 2.575300  | 1.202050 |  2.849950|
