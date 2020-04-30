@@ -227,7 +227,7 @@ Count - All values clearly show that measuremts were taken on 50 flowers in each
 
 Mean - Shows the average measurements taken for each of the flower types. 
 
-|Name | sepal-length|
+|Name | Comment|
 |:--|:--|
 |Sepal-length:|This is the measurement with the least variation across all of the Iris flowers ranging from 5-6.58 cm for with Setosa being the smallest and Virginica the largest.|
 |Sepal-width:|This meaasurement is shows very little variation between Virginica and Versicolor and also is the only average measurement where the Setosa flower is larger than the other two|
@@ -237,7 +237,7 @@ Mean - Shows the average measurements taken for each of the flower types.
 
 Standard Deviation (Std) - Shows how much the measurements differ from the mean. Typically if the (std) is low then the data would be seen to be clustered relatively closely around the mean. A high Std suggests that the data is more dispersed and would have a larger range. It also allows for the calculation of the normal distribution. Using the [Empirical or 68,95,99.7 Rule](https://towardsdatascience.com/understanding-the-68-95-99-7-rule-for-a-normal-distribution-b7b7cbf760c2) the percentage of values that fall within one and three standard deviations of the mean can be calculated. See graph below.
 
-<div align="center">
+<center>
 
 |![Standard deviation table](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Standard%20Deviation.png?raw=true)|
 |:--:| 
@@ -408,7 +408,7 @@ https://datacarpentry.org/python-ecology-lesson/02-starting-with-data/
 |:--:|
 |Empirical rule data for Iris-setosa |
 
-Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std|
+|Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std|
 |------------ | ------------- | ------------ | ------------- | -------------|------------ |------------ |------------ |                          
 |sepal-length|  4.653510 | 5.358490 | 4.301021 | 5.710979|   3.948531 |  6.063469|
 |sepal-width|   3.048936 | 3.807064|  2.669871 | 4.186129 |  2.290807 |  4.565193|
@@ -419,7 +419,7 @@ Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std|
 |:--:|
 |Empirical rule data for Iris-versicolor |
 
-Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std|
+|Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std|
 |------------ | ------------- | ------------ | ------------- | -------------|------------ |------------ |------------ |     
 |sepal-length | 5.419829| 6.452171  |4.903658 | 6.968342  | 4.387487|   7.484513|
 |sepal-width   |2.456202 | 3.083798 | 2.142403 | 3.397597  | 1.828605|   3.711395|
@@ -431,7 +431,7 @@ Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std|
 |:--:|
 |Empirical rule data for Iris-versicolor |
 
-Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std|
+|Measurement | 68%-std| 68%+std| 95%-std| 95%+std|99.7%-std|99.7%+std|
 |------------ | ------------- | ------------ | ------------- | -------------|------------ |------------ |------------ |     
 |sepal-length | 5.952120  |7.223880 | 5.316241 | 7.859759  | 4.680361 |  8.495639|
 |sepal-width  | 2.651503  |3.296497 | 2.329007 | 3.618993  | 2.006510 |  3.941490|
