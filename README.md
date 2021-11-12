@@ -16,7 +16,7 @@
 
 
 4
-<img src="Images/History.png" alt="example of classifier" style="width: 300px;"/>
+<img src="Pictures/History.png" alt="example of classifier" style="width: 300px;"/>
 
 
 <div align="left">
