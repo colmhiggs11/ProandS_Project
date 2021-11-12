@@ -265,7 +265,7 @@ Shows how much the measurements differ from the mean. Typically if the (std) is 
 
 <div align="center">
 
-|![Standard deviation table](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Standard%20Deviation.png?raw=true)|![Probability Density formula](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Probability%20Density.PNG?raw=true)|
+|![Standard deviation table](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures/Standard%20Deviation.png?raw=true)|![Probability Density formula](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures/Probability%20Density.PNG?raw=true)|
 |:--:|:--:|
 | *Empirical rule distribution*  | *Probability Density formula* |
 
