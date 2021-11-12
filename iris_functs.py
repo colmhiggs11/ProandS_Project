@@ -28,7 +28,7 @@ def IrHist(Mestyp1):
     plt.legend()
     plt.title("{} Histogram plot".format(Mestyp1))
     plt.tight_layout()
-    plt.savefig("{}.png".format(Mestyp1))
+    #plt.savefig("{}.png".format(Mestyp1))
     plt.clf
     plt.show()
 # Function to create Seaborn pairplot

@@ -29,7 +29,7 @@ This repository contains the files for the project in the Programming and Script
 
 * **Other items**
     * [Project Plan](https://github.com/colmhiggs11/ProandS_Project/tree/master/Project%20Planning) *(Latest revision of the Project Plan - Broken down into sections with completion status)*
-    * [Images used in the README.md](https://github.com/colmhiggs11/ProandS_Project/tree/master/Pictures%20for%20README)
+    * [Images used in the README.md](https://github.com/colmhiggs11/ProandS_Project/tree/master/Pictures)
     * [License](https://github.com/colmhiggs11/ProandS_Project/blob/master/LICENSE) *(MIT License)*
     * .gitignore
 
@@ -75,6 +75,10 @@ Sir Ronald Fisher (1890-1962) was a British statistician and geneticist, also ha
 Fisher had a keen interest in [Eugenics](https://www.google.com/search?q=Eugenics&oq=Eugenics&aqs=chrome..69i57j69i61l3&sourceid=chrome&ie=UTF-8). He felt that “socially strong” people should be encouraged to have more children rather that those who were classified as “socially weak” Fishers interest in Eugenics paved the way for his work in the genetics of a population.  He investigated the link between genes for different traits and developed methods of multivariate analysis to complete the analysis. One of the most famous datasets used in Data Science is Fishers Iris Dataset. This dataset comes from his work in discriminant analysis and can be found in “The use of multiple measurements in taxonomic problems” (Fisher, 1936).
 
 <div align="center">
+
+|![Fisher Data Table](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Fischer%20Data%20Table.PNG?raw=true)|
+|:--:| 
+| *Fishers Iris Dataset -“The use of multiple measurements in taxonomic problems” (Fisher, 1936)* |
 
 |![Fisher Data Table](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Fischer%20Data%20Table.PNG?raw=true)|
 |:--:| 
