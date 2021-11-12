@@ -11,6 +11,14 @@
 ![Name and Id number](https://github.com/colmhiggs11/ProandS_Project/blob/master/Pictures%20for%20README/Name%20number%20box.PNG?raw=true)
 
 
+3
+![Fisher Data Table](https://github.com/colmhiggs11/Machine_Learning_21_CH/blob/main/Images/History.png?raw=true)
+
+
+4
+<img src="Images/History.png" alt="example of classifier" style="width: 300px;"/>
+
+
 <div align="left">
 
 ## Information
